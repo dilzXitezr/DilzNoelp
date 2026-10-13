@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2 SMA AL ATIQIYAH - Ultimate Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#07080a;color:#e8e8e8;overflow-x:hidden}
+.header{position:sticky;top:0;z-index:50;background:rgba(8,8,10,0.92);backdrop-filter:blur(16px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+.header h1{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800}
+.header h1 span{color:#ffd700}
+.hero{position:relative;height:92vh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.65) contrast(1.15)}
+.hero img.overlay-photo{position:absolute;bottom:0;right:0;width:38%;max-width:320px;height:52%;object-fit:cover;object-position:top;border-radius:22px 0 0 0;border-left:2px solid rgba(255,215,0,0.3);border-top:2px solid rgba(255,215,0,0.3);box-shadow:-20px -20px 60px rgba(0,0,0,0.6);z-index:2;opacity:0.92}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 30% 40%, transparent 5%, rgba(0,0,0,0.7) 70%), linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.85) 92%);z-index:1}
+.hero-content{position:relative;z-index:3;padding:22px 18px 26px;width:100%;max-width:1100px}
+.badge{display:inline-flex;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(12px);padding:7px 14px;border-radius:30px;font-size:10px;letter-spacing:2px;font-weight:800;color:#aaa}
+.hero h1.main{font-family:'Space Grotesk',sans-serif;font-size:clamp(56px,16vw,110px);font-weight:900;line-height:0.85;letter-spacing:-4px;margin:14px 0 0;color:#fff}
+.hero h1.main span{-webkit-text-stroke:1.5px #fff;color:transparent;font-style:italic}
+.hero h2{font-size:11px;letter-spacing:5px;color:#888;font-weight:700;margin-top:8px}
+.music{margin:14px 0 0;background:linear-gradient(180deg, rgba(255,215,0,0.14), rgba(255,255,255,0.05));border:1px solid rgba(255,215,0,0.28);backdrop-filter:blur(18px);padding:12px 16px;border-radius:18px;display:inline-flex;align-items:center;gap:12px}
+.music .icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(180deg,#ffd700,#ff8a00);display:flex;align-items:center;justify-content:center;color:#000;font-weight:900}
+.music b{font-size:12px;display:block;font-weight:800;text-align:left}
+.music small{font-size:9px;color:#ffd700;text-align:left;display:block;font-weight:700}
+.music button{width:40px;height:40px;border-radius:10px;border:none;background:#fff;color:#000;font-weight:900;cursor:pointer;margin-left:8px}
+.section{padding:36px 16px;max-width:1100px;margin:0 auto}
+.s-title{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;display:flex;align-items:center;gap:10px}
+.s-title::before{content:'';width:28px;height:2px;background:#ffd700}
+.s-sub{color:#555;font-size:10px;letter-spacing:2.5px;margin-top:6px;margin-left:38px;font-weight:700}
+.real-photo{margin-top:18px;border-radius:22px;overflow:hidden;position:relative;height:420px;border:1px solid rgba(255,215,0,0.22)}
+.real-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.real-photo .label{position:absolute;bottom:12px;left:12px;right:12px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);padding:10px 14px;border-radius:14px;font-size:10px;font-weight:700;border:1px solid rgba(255,215,0,0.2);color:#ffd700;display:flex;justify-content:space-between}
+.video-box{margin-top:14px;border-radius:20px;overflow:hidden;position:relative;height:300px;border:1px solid rgba(255,255,255,0.08);background:#000}
+.video-box video{width:100%;height:100%;object-fit:cover}
+.video-box .label{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);padding:7px 12px;border-radius:20px;font-size:9px;font-weight:800;border:1px solid rgba(255,215,0,0.2);color:#ffd700}
+.members{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px}
+.member{background:linear-gradient(180deg,#151517,#0d0d0f);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:10px;text-align:center}
+.member .avatar{width:42px;height:42px;border-radius:50%;background:radial-gradient(#2a2a2a,#000);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;border:1px solid rgba(255,255,255,0.1)}
+.member b{font-size:10px;display:block}
+.member small{font-size:8px;color:#666}
+.chat-wrap{margin-top:18px;background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid rgba(255,255,255,0.08);border-radius:22px;overflow:hidden}
+.chat-header{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center}
+.chat-messages{height:340px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:radial-gradient(600px 300px at 50% 0%, rgba(255,215,0,0.06), transparent)}
+.msg{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:10px 12px;border-radius:14px;max-width:85%}
+.msg.me{align-self:flex-end;background:linear-gradient(135deg,#ffd700,#ffaa00);color:#000;border-color:#ffd700}
+.msg .name{font-size:9px;font-weight:800;opacity:0.7;margin-bottom:2px}
+.msg .text{font-size:12px;line-height:1.4}
+.msg .time{font-size:8px;opacity:0.6;margin-top:4px;text-align:right}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(255,255,255,0.06);background:#0d0d0f}
+.chat-input input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 14px;color:white;font-size:12px;outline:none}
+.chat-input input:focus{border-color:#ffd700}
+.chat-input button{background:#fff;color:#000;border:none;padding:12px 18px;border-radius:12px;font-weight:800;font-size:12px;cursor:pointer}
+.warning-modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(12px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.warning-box{background:linear-gradient(180deg,#1a1a1e,#0f0f12);border:1px solid rgba(255,80,80,0.3);border-radius:22px;padding:24px;max-width:340px;width:100%;text-align:center}
+.warning-box .icon{width:56px;height:56px;background:linear-gradient(180deg,#ff5050,#cc0000);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:28px;color:white}
+.warning-box h3{font-size:16px;font-weight:800;color:#ff5050;margin-bottom:8px}
+.warning-box p{font-size:12px;color:#aaa;line-height:1.5}
+.warning-box button{margin-top:16px;width:100%;background:#ff5050;color:white;border:none;padding:12px;border-radius:12px;font-weight:800;cursor:pointer}
+.rules{background:rgba(255,215,0,0.08);border:1px dashed rgba(255,215,0,0.25);border-radius:14px;padding:12px 14px;margin-top:12px}
+.rules small{font-size:10px;color:#ffd700;line-height:1.5;display:block}
+.footer{margin-top:40px;padding:28px 16px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;color:#555;font-size:10px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="header"><h1>SMA <span>AL ATIQIYAH</span> • X2</h1><div class="tag">32 SISWA</div></div>
+<section class="hero">
+<video autoplay muted loop playsinline><source src="eye_video_new.mp4" type="video/mp4"></video>
+<img class="overlay-photo" src="class_x2_real.jpg">
+<div class="hero-content">
+<div class="badge">◉ SMA AL ATIQIYAH • KELAS X2 • 2026</div>
+<h1 class="main">KELAS<br>X<span>2</span></h1>
+<h2>SMA AL ATIQIYAH • NO GIRLS • BROTHERHOOD</h2>
+<div class="music">
+<div class="icon">♪</div>
+<div><b>Sebuah Kisah Klasik ✅</b><small id="musicStatus">Sheila On 7 • Tap ▶</small></div>
+<button id="playBtn">▶</button>
+<audio id="audioPlayer" loop><source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg"></audio>
+</div>
+</div>
+</section>
+<div class="section">
+<div class="s-title">FOTO KELAS X2 ✅</div>
+<div class="s-sub">FOTO ASLI LU — 32 SISWA + WALI KELAS</div>
+<div class="real-photo"><img src="class_x2_real.jpg"><div class="label"><span>📸 FOTO ASLI X2 • SMA AL ATIQIYAH</span><span>32 SISWA</span></div></div>
+<div class="video-box"><video autoplay muted loop playsinline controls><source src="eye_video_new.mp4" type="video/mp4"></video><div class="label">◉ VIDEO BARU LU — GERAK 100% ✅ (MATA HOROR)</div></div>
+</div>
+<div class="section">
+<div class="s-title">NAMA MURID-MURID X2 ✅</div>
+<div class="s-sub">DAFTAR LENGKAP KELAS X2</div>
+<div class="members" id="memberGrid"></div>
+</div>
+<div class="section">
+<div class="s-title">CHAT KHUSUS KELAS X2 ✅</div>
+<div class="s-sub">ANTI NGOMONG KASAR ADA PERINGATAN</div>
+<div class="rules"><small>⚠️ PERATURAN: Jangan ngomong kasar (anjing, bangsat, tolol, goblok, dll) akan kena peringatan! 3x kasar = mute 30 detik!</small></div>
+<div class="chat-wrap">
+<div class="chat-header"><div><b>💬 Chat Kelas X2</b><br><small>32 anggota online</small></div><div style="background:rgba(0,255,0,0.15);color:#00ff88;padding:5px 10px;border-radius:20px;font-size:9px;font-weight:800">● LIVE</div></div>
+<div class="chat-messages" id="chatMessages">
+<div class="msg"><div class="name">Wali Kelas</div><div class="text">Selamat datang di chat resmi kelas X2! Jaga sopan santun ya 🤗</div><div class="time">08:00</div></div>
+<div class="msg"><div class="name">DilzNoelz</div><div class="text">Siap Bu! X2 brotherhood no toxic! 🔥</div><div class="time">08:02</div></div>
+</div>
+<div class="chat-input">
+<input type="text" id="chatName" placeholder="Nama" style="max-width:80px" value="Anak X2">
+<input type="text" id="chatInput" placeholder="Tulis chat... jangan kasar!">
+<button onclick="sendChat()">KIRIM</button>
+</div>
+</div>
+</div>
+<div class="warning-modal" id="warningModal">
+<div class="warning-box">
+<div class="icon">⚠️</div>
+<h3>KATA KASAR TERDETEKSI!</h3>
+<p>Chat lu mengandung kata kasar! Jaga sopan santun di kelas X2!<br><br>3x kasar = mute 30 detik!</p>
+<button onclick="document.getElementById('warningModal').style.display='none'">OKE PAHAM</button>
+</div>
+</div>
+<div class="footer"><b>X2 SMA AL ATIQIYAH • Ultimate</b><br>Foto + Video Gerak + Nama Sekolah + Nama Murid + Kelas X2 + Lagu + Chat + Anti Kasar ✅</div>
+<script>
+const audio=document.getElementById('audioPlayer');const btn=document.getElementById('playBtn');const st=document.getElementById('musicStatus');let pl=false;audio.volume=0.7;
+btn.addEventListener('click',()=>{if(pl){audio.pause();pl=false;btn.textContent='▶';st.textContent='Sheila On 7 • Tap untuk putar';}else{audio.play().then(()=>{pl=true;btn.textContent='❚❚';st.textContent='🎵 Sebuah Kisah Klasik - Playing...';})}});
+const names=["DilzNoelz","Fajar","Rizki","Adit","Bima","Reza","Ilham","Farhan","Rafi","Dani","Aldi","Yusuf","Zidan","Rangga","Satria","Bagas","Rian","Fauzan","Akmal","Revan","Fikri","Andra","Dimas","Galang","Hafiz","Iqbal","Lutfi","Nanda","Fadli","Arfan","Alif","Reyhan"];
+const grid=document.getElementById('memberGrid');names.forEach((n,i)=>{const d=document.createElement('div');d.className='member';d.innerHTML=`<div class="avatar">${n[0]}</div><b>${n.toUpperCase()}</b><small>X2 #${String(i+1).padStart(2,'0')}</small>`;grid.appendChild(d);});
+const badWords=["anjing","bangsat","tolol","goblok","bego","kontol","memek","ngentot","asu","bajingan","kampret","jancok","tai","babi","lonte"];
+let viol=0;
+function containsBad(t){return badWords.some(w=>t.toLowerCase().includes(w));}
+function sendChat(){
+ const name=document.getElementById('chatName').value||'Anak X2';
+ const text=document.getElementById('chatInput').value.trim();
+ if(!text) return;
+ if(containsBad(text)){document.getElementById('warningModal').style.display='flex';viol++;if(viol>=3){document.getElementById('chatInput').disabled=true;setTimeout(()=>document.getElementById('chatInput').disabled=false,30000);}return;}
+ const time=new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+ const m=document.createElement('div');m.className='msg me';m.innerHTML=`<div class="name">${name}</div><div class="text">${text}</div><div class="time">${time}</div>`;
+ document.getElementById('chatMessages').appendChild(m);
+ document.getElementById('chatInput').value='';
+ document.getElementById('chatMessages').scrollTop=9999;
+}
+document.getElementById('chatInput').addEventListener('keypress',e=>{if(e.key==='Enter') sendChat();});
+</script>
+</body>
+</html>
