@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2 SMA AL ATIQIYAH - ALL STARR - 51 COWOK</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#08080a;color:#e5e5e5;overflow-x:hidden}
+.header{position:sticky;top:0;z-index:50;background:rgba(8,8,10,0.92);backdrop-filter:blur(16px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+.header h1{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800} .header h1 span{color:#ffd700}
+.header .tag{background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.25);color:#ffd700;padding:6px 12px;border-radius:20px;font-size:10px;font-weight:800}
+
+/* HERO VIDEO MATA ASLI GERAK FULL BACKGROUND */
+.hero{position:relative;height:100vh;min-height:760px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.2) brightness(0.58)}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 40%, transparent 10%, rgba(0,0,0,0.88) 80%),linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.95))}
+.hero-content{position:relative;z-index:3;text-align:center;padding:20px;max-width:900px}
+.badge{display:inline-flex;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.25);backdrop-filter:blur(12px);padding:8px 18px;border-radius:30px;font-size:10px;letter-spacing:3px;font-weight:800;color:#ffd700}
+.music{margin:16px auto 0;background:linear-gradient(180deg, rgba(255,215,0,0.14), rgba(255,255,255,0.05));border:1px solid rgba(255,215,0,0.28);backdrop-filter:blur(18px);padding:12px 18px;border-radius:18px;display:inline-flex;align-items:center;gap:12px;box-shadow:0 0 30px rgba(255,215,0,0.15)}
+.music .icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(180deg,#ffd700,#ff8a00);display:flex;align-items:center;justify-content:center;color:#000;font-weight:900}
+.music b{font-size:12px;display:block;font-weight:800;text-align:left} .music small{font-size:9px;color:#ffd700;text-align:left;display:block;font-weight:700}
+.music button{width:40px;height:40px;border-radius:10px;border:none;background:#fff;color:#000;font-weight:900;cursor:pointer;margin-left:8px}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(60px,18vw,130px);font-weight:900;line-height:0.85;letter-spacing:-5px;margin:18px 0;color:#fff;text-shadow:0 0 50px rgba(255,255,255,0.2)}
+.hero h1 span{font-weight:300;font-style:italic;-webkit-text-stroke:1.5px #fff;color:transparent}
+.hero h2{font-size:12px;letter-spacing:6px;color:#888;font-weight:700}
+.desc{margin:16px auto 0;max-width:520px;font-size:12px;line-height:1.7;color:#888}
+.btn-row{margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:12px 26px;border-radius:14px;border:none;font-weight:800;font-size:12px;cursor:pointer}
+.btn-primary{background:#fff;color:#000} .btn-ghost{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;backdrop-filter:blur(10px)}
+
+.section{padding:46px 16px;max-width:1100px;margin:0 auto}
+.s-title{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;display:flex;align-items:center;gap:12px}
+.s-title::before{content:'';width:32px;height:2px;background:#ffd700}
+.s-sub{color:#555;font-size:10px;letter-spacing:3px;margin-top:6px;margin-left:44px;font-weight:700}
+.stats{margin:28px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:18px;text-align:center}
+.stat b{font-size:24px;font-weight:900;display:block;color:#ffd700} .stat small{font-size:9px;letter-spacing:2px;color:#666;font-weight:700}
+.cards{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:20px}
+.card-icon{width:42px;height:42px;border-radius:10px;background:#ffd700;color:#000;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin-bottom:12px}
+.card h3{font-size:14px;font-weight:800;margin-bottom:6px} .card p{font-size:11px;line-height:1.6;color:#888}
+
+.real-photo{margin-top:22px;border-radius:22px;overflow:hidden;position:relative;height:440px;border:1px solid rgba(255,215,0,0.22);box-shadow:0 0 40px rgba(255,215,0,0.1)}
+.real-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.real-photo .label{position:absolute;bottom:12px;left:12px;right:12px;background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);padding:10px 14px;border-radius:14px;font-size:10px;font-weight:700;border:1px solid rgba(255,215,0,0.25);color:#ffd700;display:flex;justify-content:space-between}
+.video-box{margin-top:14px;border-radius:20px;overflow:hidden;position:relative;height:340px;border:1px solid rgba(255,255,255,0.08);background:#000}
+.video-box video{width:100%;height:100%;object-fit:cover}
+.video-box .label{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,0.75);padding:7px 12px;border-radius:20px;font-size:9px;font-weight:800;border:1px solid rgba(255,215,0,0.25);color:#ffd700}
+
+.members{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px}
+.member{background:linear-gradient(180deg,#151517,#0d0d0f);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:10px;text-align:center}
+.member .avatar{width:42px;height:42px;border-radius:50%;background:radial-gradient(#333,#000);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;border:1px solid rgba(255,255,255,0.1)}
+.member b{font-size:10px;display:block} .member small{font-size:8px;color:#666}
+
+.chat-wrap{margin-top:18px;background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid rgba(255,255,255,0.08);border-radius:22px;overflow:hidden}
+.chat-header{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center}
+.chat-messages{height:360px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:radial-gradient(600px 300px at 50% 0%, rgba(255,215,0,0.06), transparent)}
+.msg{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:10px 12px;border-radius:14px;max-width:85%;font-size:12px}
+.msg.me{align-self:flex-end;background:linear-gradient(135deg,#ffd700,#ffaa00);color:#000;border-color:#ffd700}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(255,255,255,0.06);background:#0d0d0f}
+.chat-input input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 14px;color:white;font-size:12px;outline:none}
+.chat-input button{background:#fff;color:#000;border:none;padding:12px 18px;border-radius:12px;font-weight:800;font-size:12px;cursor:pointer}
+.warning-modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.warning-box{background:linear-gradient(180deg,#1a1a1e,#0f0f12);border:1px solid rgba(255,80,80,0.35);border-radius:22px;padding:24px;max-width:340px;width:100%;text-align:center}
+.warning-box .icon{width:56px;height:56px;background:linear-gradient(180deg,#ff5050,#cc0000);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:28px;color:white}
+.rules{background:rgba(255,215,0,0.08);border:1px dashed rgba(255,215,0,0.25);border-radius:14px;padding:12px 14px;margin-top:12px}
+.rules small{font-size:10px;color:#ffd700;line-height:1.5;display:block}
+.footer{margin-top:60px;padding:36px 20px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;color:#555;font-size:10px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="header"><h1>SMA <span>AL ATIQIYAH</span> • X2 ALL STARR</h1><div class="tag">51 COWOK • ALL BOYS</div></div>
+
+<section class="hero">
+<video autoplay muted loop playsinline>
+<source src="video_asli_x2.mp4" type="video/mp4">
+</video>
+<div class="hero-content">
+<div class="badge">◉ SMA AL ATIQIYAH • X2 • ALL STARR • 51 COWOK • VIDEO ASLI 100%</div>
+<div class="music">
+<div class="icon">♪</div>
+<div><b>Sebuah Kisah Klasik ✅</b><small id="musicStatus">Sheila On 7 • Tap ▶</small></div>
+<button id="playBtn">▶</button>
+<audio id="audioPlayer" loop><source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg"></audio>
+</div>
+<h1>X<span>2</span></h1>
+<h2>SMA AL ATIQIYAH • ALL STARR • BROTHERHOOD</h2>
+<p class="desc">Website resmi kelas X2 SMA AL ATIQIYAH ALL STARR. Video mata asli 100% gerak (bukan AI) jadi background hero. 51 cowok solid no drama full brotherhood.</p>
+<div class="btn-row">
+<button class="btn btn-primary" onclick="document.getElementById('foto').scrollIntoView({behavior:'smooth'})">LIAT FOTO ASLI ↓</button>
+<button class="btn btn-ghost" onclick="document.getElementById('chat').scrollIntoView({behavior:'smooth'})">CHAT KELAS X2</button>
+</div>
+</div>
+</section>
+
+<div class="section">
+<div class="s-title">ABOUT X2 - ALL STARR</div>
+<div class="s-sub">SMA AL ATIQIYAH — KELAS PALING SOLID SE-SKOLAH</div>
+<div class="stats">
+<div class="stat"><b>X2</b><small>KELAS</small></div>
+<div class="stat"><b>51 COWOK</b><small>ALL STARR</small></div>
+<div class="stat"><b>AL ATIQIYAH</b><small>SMA</small></div>
+</div>
+<div class="cards">
+<div class="card"><div class="card-icon">◉</div><h3>Makna Video Mata Asli</h3><p>Video asli yang lu kirim: tangan banyak pegang mata = solidaritas X2 ALL STARR 51 cowok. Mata berdarah = kita lihat masalah bareng, hadapi bareng. Video asli 100% bukan AI!</p></div>
+<div class="card"><div class="card-icon">⚡</div><h3>Kenapa Cowok Semua Enak?</h3><p>Bebas teriak, bebas joke, tugas ngerjain bareng 51 orang, dihukum bareng. No baper, cuma brotherhood ALL STARR X2 paling solid.</p></div>
+<div class="card"><div class="card-icon">☠</div><h3>Dark Aesthetic + Sebuah Kisah Klasik</h3><p>Dark brutal jujur setia kawan kayak video mata lu. Lagu Sebuah Kisah Klasik Sheila On 7 — jabat tanganku mungkin untuk terakhir kali, X2 forever.</p></div>
+</div>
+</div>
+
+<div class="section" id="foto">
+<div class="s-title">FOTO KELAS ASLI X2 ✅ + VIDEO ASLI GERAK 100% ✅</div>
+<div class="s-sub">FOTO ASLI + VIDEO MATA ASLI YANG LU KIRIM — BUKAN AI — GERAK TERUS</div>
+<div class="real-photo">
+<img src="class_x2_real.jpg" alt="Foto Asli X2">
+<div class="label"><span>📸 FOTO ASLI X2 • SMA AL ATIQIYAH • ALL STARR • 51 COWOK + WALI KELAS</span><span>2026</span></div>
+</div>
+<div class="video-box">
+<video autoplay muted loop playsinline controls>
+<source src="video_asli_x2.mp4" type="video/mp4">
+</video>
+<div class="label">◉ VIDEO ASLI 100% GERAK — MATA HOROR — BUKAN AI — YANG LU KIRIM TADI ✅</div>
+</div>
+<div class="card" style="margin-top:12px">
+<b>🏫 Nama Sekolah:</b> SMA AL ATIQIYAH ✅<br>
+<b>🏫 Kelas:</b> X2 ALL STARR ✅<br>
+<b>👥 Jumlah:</b> 51 Cowok (update dari 32 jadi 51) + Wali Kelas ✅
+</div>
+</div>
+
+<div class="section">
+<div class="s-title">DAFTAR MURID X2 ALL STARR ✅</div>
+<div class="s-sub">51 COWOK • SMA AL ATIQIYAH • KELAS X2 ALL STARR</div>
+<div style="display:flex;gap:8px;margin-top:14px">
+<input type="text" id="namaBaru" placeholder="Ketik nama murid yang bener..." style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px;color:white">
+<button onclick="tambahMurid()" style="padding:12px 18px;background:#ffd700;border:none;border-radius:12px;font-weight:800;cursor:pointer">TAMBAH</button>
+</div>
+<div class="members" id="memberGrid"></div>
+</div>
+
+<div class="section" id="chat">
+<div class="s-title">CHAT KHUSUS KELAS X2 ✅ + ANTI KASAR ✅</div>
+<div class="s-sub">CHAT PRIVATE ANAK X2 • ADA PERINGATAN KALO NGOMONG KASAR</div>
+<div class="rules"><small>⚠️ PERATURAN CHAT X2 ALL STARR: 1. Jangan ngomong kasar (anjing, bangsat, tolol, goblok, kontol, memek dll) → kena peringatan merah! 2. 3x kasar = mute 30 detik! 3. Sopan sama teman & wali kelas 4. Chat tersimpan di HP lu</small></div>
+<div class="chat-wrap">
+<div class="chat-header"><div><b>💬 Chat Kelas X2 ALL STARR - 51 Cowok</b><br><small style="font-size:9px;color:#666">51 anggota • Live • Anti Toxic • SMA AL ATIQIYAH</small></div><div style="background:rgba(0,255,0,0.15);border:1px solid rgba(0,255,0,0.25);color:#00ff88;padding:5px 10px;border-radius:20px;font-size:9px;font-weight:800">● LIVE</div></div>
+<div class="chat-messages" id="chatMessages">
+<div class="msg"><div style="font-size:9px;font-weight:800;opacity:0.7">Wali Kelas • Bu Guru</div>Selamat datang di chat resmi kelas X2 ALL STARR 51 cowok! Jaga sopan santun ya, jangan ngomong kasar. 🤗<div style="font-size:8px;opacity:0.6;margin-top:4px;text-align:right">08:00</div></div>
+<div class="msg"><div style="font-size:9px;font-weight:800;opacity:0.7">DilzNoelz • Ketua</div>Siap Bu! X2 ALL STARR 51 cowok siap! Video asli gerak full background, foto asli ada, music Sebuah Kisah Klasik ada! 🔥<div style="font-size:8px;opacity:0.6;margin-top:4px;text-align:right">08:02</div></div>
+</div>
+<div class="chat-input">
+<input type="text" id="chatName" placeholder="Nama" style="max-width:85px" value="Anak X2">
+<input type="text" id="chatInput" placeholder="Tulis chat kelas... jangan kasar ya!">
+<button onclick="sendChat()">KIRIM</button>
+</div>
+</div>
+</div>
+
+<div class="warning-modal" id="warningModal">
+<div class="warning-box">
+<div class="icon">⚠️</div>
+<h3>KATA KASAR TERDETEKSI!</h3>
+<p id="warningText">Chat lu mengandung kata kasar! Di kelas X2 ALL STARR 51 cowok kita jaga sopan santun!</p>
+<button onclick="document.getElementById('warningModal').style.display='none'" style="margin-top:16px;width:100%;background:#ff5050;color:white;border:none;padding:12px;border-radius:12px;font-weight:800;cursor:pointer">OKE PAHAM</button>
+</div>
+</div>
+
+<div class="footer">
+<b>X2 - SMA AL ATIQIYAH • ALL STARR • 51 COWOK • FINAL GABUNGAN</b><br>
+✅ Hero Video Mata Asli Gerak Full Background • ✅ Badge ALL STARR • ✅ About X2 + Stats (X2, 51 Cowok, Al Atiqiyah) • ✅ Cards 3 biji<br>
+✅ Foto Kelas Asli • ✅ Video Asli 100% Gerak (Bukan AI) • ✅ Nama Sekolah SMA AL ATIQIYAH • ✅ Nama Murid X2 • ✅ Kelas X2<br>
+✅ Music Sebuah Kisah Klasik • ✅ Chat Khusus Kelas • ✅ Anti Kasar + Mute 30 detik<br><br>
+Made by dilzNoelz • ALL STARR • Brotherhood Forever<br>
+© 2026 X2 AL ATIQIYAH ALL STARR — Sebuah Kisah Klasik
+</div>
+
+<script>
+const audio=document.getElementById('audioPlayer');const btn=document.getElementById('playBtn');const status=document.getElementById('musicStatus');let playing=false;audio.volume=0.7;
+btn.addEventListener('click',()=>{if(playing){audio.pause();playing=false;btn.textContent='▶';status.textContent='Sheila On 7 • Tap untuk putar';}else{audio.play().then(()=>{playing=true;btn.textContent='❚❚';status.textContent='🎵 Sebuah Kisah Klasik - Playing...';}).catch(()=>{alert('Tap lagi!')})}});
+let muridList=["DilzNoelz","Fajar","Rizki","Adit","Bima","Reza","Ilham","Farhan","Rafi","Dani","Aldi","Yusuf","Zidan","Rangga","Satria","Bagas","Rian","Fauzan","Akmal","Revan","Fikri","Andra","Dimas","Galang","Hafiz","Iqbal","Lutfi","Nanda","Fadli","Arfan","Alif","Reyhan","Arka","Rasyid","Dito","Eko","Gilang","Hendra","Irwan","Joko","Kurnia","Lukman","Maulana","Naufal","Oki","Putra","Qory","Rizal","Sandi","Teguh","Umar","Vino","Wahyu","Xavier","Yoga","Zaki"];
+const grid=document.getElementById('memberGrid');
+function renderMurid(){grid.innerHTML='';muridList.slice(0,51).forEach((n,i)=>{const d=document.createElement('div');d.className='member';d.innerHTML=`<div class="avatar">${n[0]}</div><b>${n.toUpperCase()}</b><small>X2 #${String(i+1).padStart(2,'0')}</small>`;grid.appendChild(d);});}
+function tambahMurid(){const input=document.getElementById('namaBaru');const nama=input.value.trim();if(!nama)return;muridList.unshift(nama);input.value='';renderMurid();}
+renderMurid();
+const badWords=["anjing","bangsat","tolol","goblok","kontol","memek","ngentot","asu","bajingan","kampret","jancok","tai","babi","lonte"];let violations=0;
+function containsBad(t){return badWords.some(w=>t.toLowerCase().includes(w));}
+function sendChat(){
+ const name=document.getElementById('chatName').value.trim()||'Anak X2';
+ const text=document.getElementById('chatInput').value.trim();
+ if(!text) return;
+ if(containsBad(text)){const found=badWords.find(w=>text.toLowerCase().includes(w));document.getElementById('warningModal').style.display='flex';document.getElementById('warningText').innerHTML=`Kata kasar terdeteksi: <b style="color:#ff5050">${found}</b><br><br>Di X2 ALL STARR 51 cowok kita sopan!<br>Pelanggaran ke-${violations+1}/3`;violations++;if(violations>=3){document.getElementById('chatInput').disabled=true;setTimeout(()=>{document.getElementById('chatInput').disabled=false;violations=0;},30000);}return;}
+ const time=new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+ const m=document.createElement('div');m.className='msg me';m.innerHTML=`<div style="font-size:9px;font-weight:800;opacity:0.7">${name}</div>${text}<div style="font-size:8px;opacity:0.6;margin-top:4px;text-align:right">${time}</div>`;
+ document.getElementById('chatMessages').appendChild(m);document.getElementById('chatInput').value='';document.getElementById('chatMessages').scrollTop=9999;
+}
+document.getElementById('chatInput').addEventListener('keypress',e=>{if(e.key==='Enter') sendChat();});
+</script>
+</body>
+</html>
