@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2 SMA AL ATIQIYAH - 51 COWOK - FINAL V3 LENGKAP BY DILZNOELZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#08080a;color:#e5e5e5;overflow-x:hidden}
+.header{position:sticky;top:0;z-index:50;background:rgba(8,8,10,0.95);backdrop-filter:blur(16px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+.header h1{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:800}.header h1 span{color:#ffd700}
+.tag{background:#ffd700;color:#000;padding:6px 12px;border-radius:20px;font-size:10px;font-weight:900}
+.hero{position:relative;height:100vh;min-height:800px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#000}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.15) brightness(0.58)}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 40%, transparent 10%, rgba(0,0,0,0.88) 80%),linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.95))}
+.hero-content{position:relative;z-index:3;text-align:center;padding:20px;max-width:900px}
+.badge{display:inline-flex;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.25);backdrop-filter:blur(12px);padding:8px 18px;border-radius:30px;font-size:10px;letter-spacing:3px;font-weight:800;color:#ffd700}
+.music{margin:14px auto 0;background:linear-gradient(180deg, rgba(255,215,0,0.14), rgba(255,255,255,0.05));border:1px solid rgba(255,215,0,0.28);backdrop-filter:blur(18px);padding:12px 18px;border-radius:18px;display:inline-flex;align-items:center;gap:12px;box-shadow:0 0 30px rgba(255,215,0,0.15)}
+.music .icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(180deg,#ffd700,#ff8a00);display:flex;align-items:center;justify-content:center;color:#000;font-weight:900}
+.music b{font-size:12px;display:block;font-weight:800;text-align:left}.music small{font-size:9px;color:#ffd700;text-align:left;display:block;font-weight:700}
+.music button{width:40px;height:40px;border-radius:10px;border:none;background:#fff;color:#000;font-weight:900;cursor:pointer;margin-left:8px}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(60px,18vw,130px);font-weight:900;line-height:0.85;letter-spacing:-5px;margin:16px 0;color:#fff}
+.hero h1 span{font-weight:300;font-style:italic;-webkit-text-stroke:1.5px #fff;color:transparent}
+.hero h2{font-size:11px;letter-spacing:5px;color:#888;font-weight:700}
+.desc{margin:12px auto 0;max-width:560px;font-size:11px;line-height:1.7;color:#888}
+.btn-row{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{padding:11px 22px;border-radius:14px;border:none;font-weight:800;font-size:11px;cursor:pointer}
+.btn-primary{background:#fff;color:#000}.btn-ghost{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff}
+.section{padding:40px 16px;max-width:1100px;margin:0 auto}
+.s-title{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:800;display:flex;align-items:center;gap:12px}
+.s-title::before{content:'';width:32px;height:2px;background:#ffd700}
+.s-sub{color:#555;font-size:10px;letter-spacing:3px;margin-top:6px;margin-left:44px;font-weight:700}
+.stats{margin:22px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:16px;text-align:center}
+.stat b{font-size:20px;font-weight:900;display:block;color:#ffd700}.stat small{font-size:8px;letter-spacing:2px;color:#666;font-weight:700}
+.cards{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:18px}
+.card-icon{width:42px;height:42px;border-radius:10px;background:#ffd700;color:#000;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:10px}
+.card h3{font-size:13px;font-weight:800;margin-bottom:6px}.card p{font-size:11px;line-height:1.6;color:#888}
+.real-photo{margin-top:18px;border-radius:22px;overflow:hidden;position:relative;height:440px;border:1px solid rgba(255,215,0,0.22)}
+.real-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.real-photo .label{position:absolute;bottom:12px;left:12px;right:12px;background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);padding:10px 14px;border-radius:14px;font-size:10px;font-weight:700;border:1px solid rgba(255,215,0,0.25);color:#ffd700;display:flex;justify-content:space-between}
+.video-box{margin-top:14px;border-radius:20px;overflow:hidden;position:relative;height:400px;border:1px solid rgba(255,255,255,0.08);background:#000}
+.video-box video{width:100%;height:100%;object-fit:cover}
+.video-box .label{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,0.75);padding:7px 12px;border-radius:20px;font-size:9px;font-weight:800;border:1px solid rgba(255,215,0,0.25);color:#ffd700}
+.members{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px}
+.member{background:linear-gradient(180deg,#151517,#0d0d0f);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:10px;text-align:center}
+.member .avatar{width:42px;height:42px;border-radius:50%;background:radial-gradient(#333,#000);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.member b{font-size:10px;display:block}.member small{font-size:8px;color:#666}
+.chat-wrap{margin-top:16px;background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid rgba(255,255,255,0.08);border-radius:22px;overflow:hidden}
+.chat-header{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center}
+.chat-messages{height:360px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:radial-gradient(600px 300px at 50% 0%, rgba(255,215,0,0.06), transparent)}
+.msg{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:10px 12px;border-radius:14px;max-width:85%;font-size:12px}
+.msg.me{align-self:flex-end;background:linear-gradient(135deg,#ffd700,#ffaa00);color:#000}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(255,255,255,0.06);background:#0d0d0f}
+.chat-input input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 14px;color:white;font-size:12px;outline:none}
+.chat-input button{background:#fff;color:#000;border:none;padding:12px 18px;border-radius:12px;font-weight:800;font-size:12px;cursor:pointer}
+.warning-modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.warning-box{background:linear-gradient(180deg,#1a1a1e,#0f0f12);border:1px solid rgba(255,80,80,0.35);border-radius:22px;padding:24px;max-width:340px;width:100%;text-align:center}
+.alarm-box{background:linear-gradient(180deg, rgba(255,0,0,0.12), rgba(255,215,0,0.12));border:1px solid rgba(255,0,0,0.25);border-radius:18px;padding:18px;margin-top:14px}
+.alarm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:12px}
+.alarm-item{background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:12px;text-align:center}
+.alarm-item b{font-size:11px;display:block}.alarm-item small{font-size:9px;color:#888}
+.alarm-item button{margin-top:8px;width:100%;background:#ff0000;color:#fff;border:none;padding:8px;border-radius:10px;font-weight:800;font-size:10px;cursor:pointer}
+.footer{margin-top:50px;padding:36px 20px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;color:#555;font-size:10px;line-height:1.8}
+.creator{display:inline-flex;background:linear-gradient(135deg,#ffd700,#ff8a00);color:#000;padding:8px 16px;border-radius:20px;font-weight:900;font-size:11px;box-shadow:0 0 20px rgba(255,215,0,0.3);margin-top:10px}
+</style>
+</head>
+<body>
+<div class="header"><h1>SMA <span>AL ATIQIYAH</span> • X2 ALL STARR</h1><div class="tag">51 COWOK • FINAL V3</div></div>
+
+<section class="hero">
+<!-- VIDEO WAJIB ON NO AI - VIDEO ASLI 100% BUKAN AI -->
+<video autoplay muted loop playsinline id="heroVideo">
+<source src="video_final_ini.mp4" type="video/mp4">
+</video>
+<div class="hero-content">
+<div class="badge">◉ SMA AL ATIQIYAH • X2 • 51 COWOK • VIDEO ASLI NO AI • KP CIPANENGAH • BY DILZNOELZ</div>
+<div class="music">
+<div class="icon">♪</div>
+<div><b>Sebuah Kisah Klasik ✅ Music</b><small id="musicStatus">Sheila On 7 • Tap ▶</small></div>
+<button id="playBtn">▶</button>
+<audio id="audioPlayer" loop><source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg"></audio>
+</div>
+<h1>X<span>2</span></h1>
+<h2>SMA AL ATIQIYAH • ALL STARR • 51 COWOK</h2>
+<p class="desc">Website resmi kelas X2 ALL STARR 51 cowok Kp Cipanengah. Video asli mata horror gerak full background 100% video asli yang lu kirim, bukan AI. Dibuat oleh DilzNoelz.</p>
+<div class="btn-row">
+<button class="btn btn-primary" onclick="document.getElementById('foto').scrollIntoView({behavior:'smooth'})">LIAT FOTO KELAS ↓</button>
+<button class="btn btn-ghost" onclick="document.getElementById('alarm').scrollIntoView({behavior:'smooth'})">ALARM SEKOLAH KP CIPANENGAH</button>
+</div>
+<div class="creator">👨‍💻 PEMBIMBIN WEB: DILZNOELZ</div>
+</div>
+</section>
+
+<div class="section">
+<div class="s-title">NAMA SEKOLAH SMA AL ATIQIYAH ✅</div>
+<div class="s-sub">SMA AL ATIQIYAH — ALAMAT KP CIPANENGAH</div>
+<div class="stats">
+<div class="stat"><b>X2</b><small>KELAS</small></div>
+<div class="stat"><b>51 COWOK</b><small>MURID 51 ✅</small></div>
+<div class="stat"><b>AL ATIQIYAH</b><small>SMA ALATIQIYAH ✅</small></div>
+</div>
+
+<div class="cards">
+<div class="card"><div class="card-icon">🏫</div><h3>Nama Sekolah: SMA AL ATIQIYAH ✅</h3><p>SMA Al Atiqiyah — Swasta Akreditasi A — NPSN 20247145 — Kp Cipanengah</p></div>
+<div class="card"><div class="card-icon">📍</div><h3>Alamat: Kp Cipanengah ✅</h3><p>JL. Cipanengah-Bojong Genteng RT 2 RW 3, Cipanengah, Bojong Genteng, Sukabumi 43353</p></div>
+<div class="card"><div class="card-icon">🎵</div><h3>Music: Sebuah Kisah Klasik ✅</h3><p>Sheila On 7 — Tap Play di hero untuk putar music!</p></div>
+</div>
+
+<!-- ALARM AT SEKOLAH KP CIPANENGAH ✅ -->
+<div class="alarm-box" id="alarm">
+<b>🔔 ALARM AT SEKOLAH KP CIPANENGAH ✅</b><br>
+<small style="font-size:10px;color:#ff8888">Alarm bel sekolah SMA AL ATIQIYAH Kp Cipanengah — Bojong Genteng — Sukabumi</small><br>
+<small style="font-size:10px;color:#666" id="jamLive">Jam Sekarang: 00:00:00 WIB — Kp Cipanengah</small>
+<div class="alarm-grid">
+<div class="alarm-item"><b>🔔 07:00</b><small>Bel Masuk Pagi</small><button onclick="bunyiAlarm('Masuk Pagi - X2 ALL STARR Kp Cipanengah')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 09:30</b><small>Bel Istirahat 1</small><button onclick="bunyiAlarm('Istirahat 1 - Kp Cipanengah')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 12:00</b><small>Bel Dzuhur</small><button onclick="bunyiAlarm('Dzuhur - SMA AL ATIQIYAH')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 13:30</b><small>Bel Masuk Siang</small><button onclick="bunyiAlarm('Masuk Siang - Kp Cipanengah')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 15:30</b><small>Bel Pulang</small><button onclick="bunyiAlarm('Pulang - X2 ALL STARR')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 CUSTOM</b><small>Alarm Darurat</small><button onclick="bunyiAlarm('DARURAT - X2 Kp Cipanengah!')">🚨 DARURAT</button></div>
+</div>
+<audio id="alarmAudio" preload="auto"><source src="https://files.catbox.moe/3y0i1y.mp3" type="audio/mpeg"></audio>
+<div style="margin-top:10px;background:rgba(0,0,0,0.3);padding:10px;border-radius:10px;font-size:9px;color:#888">📍 Lokasi Alarm: JL. Cipanengah-Bojong Genteng RT 2 RW 3, Cipanengah, Bojong Genteng, Kab. Sukabumi 43353 — SMA AL ATIQIYAH</div>
+</div>
+</div>
+
+<div class="section" id="video">
+<div class="s-title">VIDEO WAJIB ON NO AI ✅</div>
+<div class="s-sub">VIDEO ASLI YANG LU KIRIM — 100% BUKAN AI — WAJIB ON</div>
+<div class="video-box">
+<video autoplay muted loop playsinline controls>
+<source src="video_final_ini.mp4" type="video/mp4">
+</video>
+<div class="label">◉ VIDEO WAJIB ON • NO AI • 100% ASLI • KP CIPANENGAH • GERAK TERUS ✅</div>
+</div>
+</div>
+
+<div class="section" id="foto">
+<div class="s-title">FOTO KELAS X2 ✅</div>
+<div class="s-sub">FOTO KLS X2 SMA AL ATIQIYAH</div>
+<div class="real-photo">
+<img src="class_x2_real.jpg" alt="Foto Kelas X2">
+<div class="label"><span>📸 FTO KLS X2 • SMA AL ATIQIYAH • 51 COWOK • KP CIPANENGAH ✅</span><span>FTO KLS ✅</span></div>
+</div>
+</div>
+
+<div class="section">
+<div class="s-title">NAMA MURID 51 ✅ + MURID 51 ✅</div>
+<div class="s-sub">51 MURID X2 ALL STARR — NAMA MURID LENGKAP</div>
+<div style="display:flex;gap:8px;margin-top:14px">
+<input type="text" id="namaBaru" placeholder="Tambah nama murid X2..." style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px;color:white">
+<button onclick="tambahMurid()" style="padding:12px 18px;background:#ffd700;border:none;border-radius:12px;font-weight:800;cursor:pointer">TAMBAH</button>
+</div>
+<div class="members" id="memberGrid"></div>
+</div>
+
+<div class="section" id="chat">
+<div class="s-title">CHT UNTUK KLS ✅ + PERINGATAN BAHASA KASAR ✅</div>
+<div class="s-sub">CHT KLS + PERINGATAN KASAR WAJIB ADA</div>
+<div style="background:rgba(255,215,0,0.08);border:1px dashed rgba(255,215,0,0.25);border-radius:14px;padding:12px 14px;margin-top:12px">
+<small style="font-size:10px;color:#ffd700;line-height:1.5;display:block">⚠️ PERINGATAN BAHASA KASAR WAJIB AD PERINGATAN: Jangan ngomong kasar (anjing, bangsat, tolol, goblok dll) → kena peringatan merah + mute 30 detik!</small>
+</div>
+<div class="chat-wrap">
+<div class="chat-header"><div><b>💬 CHT KLS X2 ALL STARR - 51 COWOK - KP CIPANENGAH</b><br><small style="font-size:9px;color:#666">51 anggota • Live • SMA AL ATIQIYAH • By DilzNoelz</small></div><div style="background:rgba(0,255,0,0.15);border:1px solid rgba(0,255,0,0.25);color:#00ff88;padding:5px 10px;border-radius:20px;font-size:9px;font-weight:800">● LIVE</div></div>
+<div class="chat-messages" id="chatMessages">
+<div class="msg"><div style="font-size:9px;font-weight:800;opacity:0.7">Wali Kelas</div>Selamat datang X2! Alarm di Kp Cipanengah udah aktif? 🤗<div style="font-size:8px;opacity:0.6;margin-top:4px;text-align:right">07:00</div></div>
+<div class="msg"><div style="font-size:9px;font-weight:800;opacity:0.7">DilzNoelz</div>Udah Bu! Alarm at sekolah Kp Cipanengah udah ada — bel masuk, istirahat, pulang — plus chat + peringatan kasar! 🔥<div style="font-size:8px;opacity:0.6;margin-top:4px;text-align:right">07:02</div></div>
+</div>
+<div class="chat-input">
+<input type="text" id="chatName" placeholder="Nama" style="max-width:85px" value="Anak X2">
+<input type="text" id="chatInput" placeholder="Tulis chat... jangan kasar ya!">
+<button onclick="sendChat()">KIRIM</button>
+</div>
+</div>
+</div>
+
+<div class="warning-modal" id="warningModal">
+<div class="warning-box">
+<div style="font-size:40px">⚠️</div>
+<h3 style="margin-top:10px;color:#ff5050">PERINGATAN BAHASA KASAR!</h3>
+<p id="warningText" style="font-size:12px;margin-top:10px;line-height:1.5">Jangan ngomong kasar di X2 Kp Cipanengah!</p>
+<button onclick="document.getElementById('warningModal').style.display='none'" style="margin-top:16px;width:100%;background:#ff5050;color:white;border:none;padding:12px;border-radius:12px;font-weight:800">OKE PAHAM — GAK KASAR LAGI</button>
+</div>
+</div>
+
+<div class="footer">
+<b>X2 - SMA AL ATIQIYAH • ALL STARR • 51 COWOK • FINAL V3 — KP CIPANENGAH</b><br>
+✅ Murid 51 • ✅ Music • ✅ Nama Sekolah SMA ALATIQIYAH • ✅ Nama Murid • ✅ Alarm At Sekolah Kp Cipanengah • ✅ Vidio Wajib On No AI • ✅ Fto Kls • ✅ Cht Untuk Kls • ✅ Peringatan Untuk Bahasa Kasar Wajib Ad Peringatan • ✅ Pembikin Web Ny DilzNoelz<br><br>
+<div class="creator">👨‍💻 PEMBIMBIN WEB NY: DILZNOELZ — X2 ALL STARR 2026</div><br><br>
+📍 Alamat: Kp Cipanengah — JL. Cipanengah-Bojong Genteng RT 2 RW 3, Cipanengah, Bojong Genteng, Kab. Sukabumi 43353<br>
+© 2026 X2 AL ATIQIYAH — Kp Cipanengah — Dibuat oleh DilzNoelz — Sebuah Kisah Klasik
+</div>
+
+<script>
+const audio=document.getElementById('audioPlayer');const btn=document.getElementById('playBtn');const status=document.getElementById('musicStatus');let playing=false;audio.volume=0.7;
+btn.addEventListener('click',()=>{if(playing){audio.pause();playing=false;btn.textContent='▶';status.textContent='Sheila On 7 • Tap ▶';}else{audio.play().then(()=>{playing=true;btn.textContent='❚❚';status.textContent='🎵 Playing... Sebuah Kisah Klasik';}).catch(()=>{alert('Tap lagi!')})}});
+function updateJam(){const now=new Date();document.getElementById('jamLive').textContent='Jam Sekarang: '+now.toLocaleTimeString('id-ID')+' WIB — Kp Cipanengah — SMA AL ATIQIYAH';}setInterval(updateJam,1000);updateJam();
+function bunyiAlarm(jenis){const al=document.getElementById('alarmAudio');al.currentTime=0;al.play().then(()=>{alert('🔔 ALARM AT SEKOLAH KP CIPANENGAH BERBUNYI!\\n\\nJenis: '+jenis+'\\nLokasi: JL. Cipanengah-Bojong Genteng RT 2 RW 3\\nSMA AL ATIQIYAH\\n\\nBy DilzNoelz');}).catch(()=>{alert('🔔 ALARM: '+jenis+' — Kp Cipanengah!');});}
+let muridList=["DilzNoelz (Pembuat Web)","Fajar","Rizki","Adit","Bima","Reza","Ilham","Farhan","Rafi","Dani","Aldi","Yusuf","Zidan","Rangga","Satria","Bagas","Rian","Fauzan","Akmal","Revan","Fikri","Andra","Dimas","Galang","Hafiz","Iqbal","Lutfi","Nanda","Fadli","Arfan","Alif","Reyhan","Arka","Rasyid","Dito","Eko","Gilang","Hendra","Irwan","Joko","Kurnia","Lukman","Maulana","Naufal","Oki","Putra","Qory","Rizal","Sandi","Teguh","Umar","Vino","Wahyu","Xavier","Yoga","Zaki"];
+const grid=document.getElementById('memberGrid');
+function renderMurid(){grid.innerHTML='';muridList.slice(0,51).forEach((n,i)=>{const d=document.createElement('div');d.className='member';d.innerHTML=`<div class="avatar">${n[0]}</div><b>${n.toUpperCase()}</b><small>X2 #${String(i+1).padStart(2,'0')}</small>`;grid.appendChild(d);});}
+function tambahMurid(){const input=document.getElementById('namaBaru');const nama=input.value.trim();if(!nama)return;muridList.unshift(nama);input.value='';renderMurid();}
+renderMurid();
+const badWords=["anjing","bangsat","tolol","goblok","kontol","memek","ngentot","asu","bajingan","kampret","jancok","tai","babi","lonte","bego"];let violations=0;
+function containsBad(t){return badWords.some(w=>t.toLowerCase().includes(w));}
+function sendChat(){
+ const name=document.getElementById('chatName').value.trim()||'Anak X2';
+ const text=document.getElementById('chatInput').value.trim();
+ if(!text) return;
+ if(containsBad(text)){
+   const found=badWords.find(w=>text.toLowerCase().includes(w));
+   document.getElementById('warningModal').style.display='flex';
+   document.getElementById('warningText').innerHTML=`Kata kasar terdeteksi: <b style="color:#ff5050">${found}</b><br><br>Di X2 Kp Cipanengah kita sopan!<br>Pelanggaran ke-${violations+1}/3<br><br>⚠️ PERINGATAN UNTUK BAHASA KASAR WAJIB AD PERINGATAN!`;
+   violations++;if(violations>=3){document.getElementById('chatInput').disabled=true;document.getElementById('chatInput').placeholder='Mute 30 detik!';setTimeout(()=>{document.getElementById('chatInput').disabled=false;violations=0;document.getElementById('chatInput').placeholder='Tulis chat... jangan kasar ya!';},30000);}return;
+ }
+ const time=new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+ const m=document.createElement('div');m.className='msg me';m.innerHTML=`<div style="font-size:9px;font-weight:800;opacity:0.7">${name}</div>${text}<div style="font-size:8px;opacity:0.6;margin-top:4px;text-align:right">${time}</div>`;
+ document.getElementById('chatMessages').appendChild(m);document.getElementById('chatInput').value='';document.getElementById('chatMessages').scrollTop=9999;
+}
+document.getElementById('chatInput').addEventListener('keypress',e=>{if(e.key==='Enter') sendChat();});
+</script>
+</body>
+</html>
