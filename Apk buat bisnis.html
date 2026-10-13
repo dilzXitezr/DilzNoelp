@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>dilzNoelz V4 - Realistis 15 Detik + Join Saluran + WA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#000;color:#fff;overflow:hidden;height:100vh;width:100vw}
+#intro{position:fixed;inset:0;z-index:9999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+#intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.4) brightness(.9)}
+.smoke{position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 40%, transparent 10%, rgba(0,0,0,.3) 40%, rgba(0,0,0,.9) 80%);animation:smokeMove 8s infinite alternate;pointer-events:none;z-index:1}
+@keyframes smokeMove{0%{transform:translateX(-10px) scale(1)}100%{transform:translateX(10px) scale(1.05)}}
+.glow-text{position:relative;z-index:3;font-family:Orbitron;font-size:42px;font-weight:900;letter-spacing:8px;color:#fff;text-shadow:0 0 10px #a855f7,0 0 30px #a855f7,0 0 60px #a855f7;animation:glitch 2.5s infinite, pulseGlow 2s infinite}
+@keyframes pulseGlow{0%,100%{text-shadow:0 0 10px #a855f7,0 0 30px #a855f7}50%{text-shadow:0 0 20px #fff,0 0 40px #a855f7,0 0 80px #a855f7}}
+@keyframes glitch{0%,90%,100%{transform:translate(0)}92%{transform:translate(-2px,1px)}94%{transform:translate(2px,-1px)}}
+.timer{position:relative;z-index:3;margin-top:12px;background:rgba(255,255,255,.1);border:1px solid rgba(168,85,247,.4);padding:6px 16px;border-radius:20px;font-size:11px;letter-spacing:2px;color:#a855f7}
+.progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg,#a855f7,#ffd700);width:0%;z-index:4;transition:width .2s linear;box-shadow:0 0 10px #a855f7}
+.screen{position:absolute;inset:0;display:none;background:radial-gradient(900px 500px at 50% 0%, rgba(168,85,247,.18), transparent 60%), #05070f;overflow-y:auto;padding:16px}
+.screen.active{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.login-box{max-width:360px;margin:6vh auto 0;background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 0 1px rgba(168,85,247,.1) inset}
+.avatar{width:90px;height:90px;margin:0 auto;border-radius:20px;background:linear-gradient(135deg,#a855f7,#7c3aed);display:flex;align-items:center;justify-content:center;font-family:Orbitron;font-size:28px;font-weight:900;box-shadow:0 0 30px rgba(168,85,247,.5);animation:avatarPulse 2s infinite}
+@keyframes avatarPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.input-group{position:relative;margin-top:12px}
+.input{width:100%;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);padding:14px 14px 14px 42px;border-radius:14px;color:#fff;outline:none;transition:.2s}
+.input:focus{border-color:#a855f7;box-shadow:0 0 0 3px rgba(168,85,247,.2)}
+.icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#666}
+.btn{width:100%;background:linear-gradient(135deg,#a855f7,#7c3aed);border:none;padding:14px;border-radius:14px;color:#fff;font-weight:900;letter-spacing:1px;cursor:pointer;box-shadow:0 8px 20px rgba(168,85,247,.4)}
+.btn-sec{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:12px;border-radius:14px;color:#fff;font-weight:700;cursor:pointer;margin-top:8px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:14px;margin-bottom:12px;backdrop-filter:blur(10px)}
+.prod{display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.06);border-radius:12px;margin-bottom:8px}
+.prod button{background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff;border:none;padding:6px 12px;border-radius:8px;font-size:10px;font-weight:800;cursor:pointer}
+.wa-float{position:fixed;bottom:16px;right:16px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 8px 20px rgba(37,211,102,.4);z-index:100;cursor:pointer;animation:waPulse 2s infinite}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+</style></head><body>
+<div id="intro">
+<video id="introVid" autoplay muted playsinline><source src="video_intro_mata.mp4" type="video/mp4"></video>
+<div class="smoke"></div>
+<div style="position:relative;z-index:3;text-align:center;padding:20px">
+<div class="glow-text">dilzNoelz V4</div>
+<p style="color:#a855f7;letter-spacing:4px;font-size:10px;font-weight:800;margin-top:6px">BUSINESS STORE • 15 DETIK REALISTIS</p>
+<div class="timer" id="timer">LOADING... 15s</div>
+</div>
+<div class="progress" id="prog"></div>
+</div>
+<div class="screen" id="loginScreen">
+<div class="login-box">
+<div style="text-align:center">
+<div class="avatar">D4</div>
+<h1 style="font-family:Orbitron;font-size:22px;letter-spacing:4px;margin-top:14px">dilzNoelz V4</h1>
+<p style="font-size:10px;color:#777;margin-top:4px">Business Store • File • Panel • Proxy • Realistis</p>
+<p style="font-size:9px;color:#555">User: 147 | Pass: 157 | By DilzNoelz</p>
+</div>
+<div style="margin-top:18px">
+<div class="input-group"><span class="icon">👤</span><input class="input" id="user" placeholder="Username" value="147"></div>
+<div class="input-group"><span class="icon">🔒</span><input class="input" id="pass" type="password" placeholder="Password" value="157"></div>
+<button class="btn" onclick="login()" style="margin-top:14px">LOGIN — dilzNoelz V4</button>
+<button class="btn-sec" onclick="joinChannel()">📢 JOIN SALURAN — CHANNEL</button>
+<button class="btn-sec" onclick="openWA('Halo kak dilzNoelz V4, mau tanya toko')">💬 CHAT WA — NO GUA</button>
+<p id="loginMsg" style="font-size:10px;color:#ff5050;text-align:center;margin-top:10px;display:none"></p>
+</div>
+</div>
+</div>
+<div class="screen" id="dashScreen">
+<div style="max-width:420px;margin:0 auto">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0 14px">
+<h2 style="font-family:Orbitron;font-size:16px">dilzNoelz Dashboard</h2>
+<span style="background:#a855f7;padding:4px 10px;border-radius:20px;font-size:9px;font-weight:900">V4 REALISTIS</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div class="card" style="text-align:center"><small style="color:#666">Online Users</small><h2 id="onlineCount">147</h2><small style="color:#25D366;font-size:9px">● Live</small></div>
+<div class="card" style="text-align:center"><small style="color:#666">Connections</small><h2 id="connCount">342</h2><small style="color:#25D366;font-size:9px">● Active</small></div>
+</div>
+<div class="card">
+<div style="display:flex;justify-content:space-between"><b>Latest News</b><span style="background:#25D366;color:#fff;padding:2px 8px;border-radius:10px;font-size:9px">NEW</span></div>
+<div style="margin-top:10px;padding:10px;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(124,58,237,.1));border-radius:12px;border-left:3px solid #a855f7">
+<b style="font-size:12px">dilzNoelz V4 — Realistis Update!</b><br>
+<small style="font-size:10px;color:#aaa">✅ Video 15 detik realistis — asap + glitch<br>✅ User 147 / Pass 157 — login auto<br>✅ Join saluran + No WA gua — WA langsung<br>✅ Toko file/panel/proxy ready!</small>
+</div>
+</div>
+<div class="card">
+<b>Account Statistics</b>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+<div style="background:rgba(0,0,0,.3);padding:12px;border-radius:12px"><small style="color:#666">Username</small><br><b style="color:#a855f7">147</b></div>
+<div style="background:rgba(0,0,0,.3);padding:12px;border-radius:12px"><small style="color:#666">Role</small><br><b style="color:#ff5050">OWNER</b></div>
+</div>
+<div style="background:rgba(255,165,0,.1);border:1px solid rgba(255,165,0,.2);padding:10px;border-radius:10px;margin-top:10px;display:flex;justify-content:space-between">
+<small>Account Expires</small><b style="color:orange">+029405-03-11</b>
+</div>
+</div>
+<div class="card" style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(37,211,102,.06));border-color:rgba(168,85,247,.2)">
+<div style="display:flex;justify-content:space-between;align-items:center"><b>🛒 Toko Bisnis — File / Panel / Proxy</b><span style="font-size:9px;color:#25D366">● WA GUA</span></div>
+<div style="margin-top:12px">
+<div class="prod"><div><b>📁 FILE SC VIP</b><br><small style="color:#666">Bot WA, Web X2, Store V4</small></div><div style="text-align:right"><b style="color:#a855f7">50K</b><br><button onclick="buy('FILE SC VIP')">BUY → WA</button></div></div>
+<div class="prod"><div><b>🎛️ PANEL PTERO</b><br><small style="color:#666">Private, anti delete</small></div><div style="text-align:right"><b style="color:#a855f7">15K</b><br><button onclick="buy('PANEL PTERO')">BUY → WA</button></div></div>
+<div class="prod"><div><b>🌐 PROXY PRIVATE</b><br><small style="color:#666">Fast, no log, 30 hari</small></div><div style="text-align:right"><b style="color:#a855f7">25K</b><br><button onclick="buy('PROXY PRIVATE')">BUY → WA</button></div></div>
+<div class="prod"><div><b>👑 AKSES FULL V4</b><br><small style="color:#666">File + Panel + Proxy + Update</small></div><div style="text-align:right"><b style="color:#ffd700">100K</b><br><button onclick="buy('AKSES FULL DILZNOELZ V4')" style="background:#ffd700;color:#000">BUY → WA</button></div></div>
+</div>
+<div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<button class="btn-sec" onclick="joinChannel()">📢 JOIN SALURAN</button>
+<button class="btn-sec" onclick="openWA('Halo kak dilzNoelz V4, mau order')" style="background:rgba(37,211,102,.15);border-color:rgba(37,211,102,.3);color:#25D366">💬 WA GUA</button>
+</div>
+</div>
+<button class="btn-sec" onclick="logout()" style="max-width:420px;margin:10px auto;display:block">LOGOUT</button>
+</div>
+</div>
+<div class="wa-float" onclick="openWA('Halo kak dilzNoelz V4')">💬</div>
+<script>
+const waNumber = "628xxxxxxxxxx"; // GANTI JADI NO WA LU DIL! Contoh 62895xxxx
+const channelLink = "https://t.me/dilzNoelz"; // GANTI LINK SALURAN LU
+const USER_VALID = "147";
+const PASS_VALID = "157";
+let introTime = 15;
+const timerEl = document.getElementById('timer');
+const progEl = document.getElementById('prog');
+const introEl = document.getElementById('intro');
+const introVid = document.getElementById('introVid');
+let countdown = setInterval(()=>{
+  introTime--;
+  timerEl.textContent = `MASUK DALAM ${introTime}s — dilzNoelz V4`;
+  progEl.style.width = ((15-introTime)/15*100)+'%';
+  if(introTime<=0){clearInterval(countdown); masukWeb();}
+},1000);
+introVid.addEventListener('ended', masukWeb);
+function masukWeb(){
+  clearInterval(countdown);
+  progEl.style.width='100%';
+  introEl.style.opacity='0';
+  setTimeout(()=>{introEl.style.display='none'; document.getElementById('loginScreen').classList.add('active');},800);
+}
+setInterval(()=>{
+  const o=document.getElementById('onlineCount'); if(o) o.textContent = 140 + Math.floor(Math.random()*15);
+  const c=document.getElementById('connCount'); if(c) c.textContent = 330 + Math.floor(Math.random()*30);
+},2000);
+function login(){
+  const u=document.getElementById('user').value.trim();
+  const p=document.getElementById('pass').value.trim();
+  const msg=document.getElementById('loginMsg');
+  if(u===USER_VALID && p===PASS_VALID){
+    document.getElementById('loginScreen').classList.remove('active');
+    document.getElementById('dashScreen').classList.add('active');
+  } else {
+    msg.style.display='block';
+    msg.textContent = `❌ Salah! Yang bener User 147 / Pass 157 — Lu isi ${u}/${p}`;
+  }
+}
+function logout(){document.getElementById('dashScreen').classList.remove('active'); document.getElementById('loginScreen').classList.add('active');}
+function joinChannel(){window.open(channelLink,'_blank');}
+function openWA(text){
+  if(waNumber.includes('xxxx')){alert('⚠️ GANTI NO WA LU DULU! Cari waNumber jadi no lu 628xxxx'); return;}
+  const pesan = encodeURIComponent(text || 'Halo kak dilzNoelz V4 👋');
+  window.open(`https://wa.me/${waNumber}?text=${pesan}`,'_blank');
+}
+function buy(item){
+  if(waNumber.includes('xxxx')){alert('⚠️ GANTI NO WA LU DULU!'); return;}
+  const pesan = encodeURIComponent(`Halo kak dilzNoelz V4 👋 Mau order: *${item}* User: 147 Tolong info harga & payment ya kak!`);
+  window.open(`https://wa.me/${waNumber}?text=${pesan}`,'_blank');
+}
+document.getElementById('pass').addEventListener('keypress',e=>{if(e.key==='Enter')login();});
+</script></body></html>
