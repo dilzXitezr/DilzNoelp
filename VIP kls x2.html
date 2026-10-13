@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2 - Video Atas Foto Bawah</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#000;color:white}
+.top-bar{background:#000;padding:10px 12px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:20;border-bottom:1px solid #222}
+.search{flex:1;background:#1e1e1e;border:1px solid #333;border-radius:22px;padding:8px 14px;display:flex;align-items:center;gap:8px}
+.search input{flex:1;background:transparent;border:none;color:white;outline:none;font-size:13px}
+.video-section{position:relative;width:100%;height:68vh;min-height:520px;background:#000;overflow:hidden}
+.video-section video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.overlay-text{position:absolute;top:18px;left:14px;right:68px;z-index:3;font-size:20px;font-weight:900;line-height:1.25;color:white;text-shadow:0 2px 12px rgba(0,0,0,0.9)}
+.side{position:absolute;right:8px;bottom:90px;z-index:4;display:flex;flex-direction:column;gap:16px;align-items:center}
+.side .ic{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:18px}
+.bottom-meta{position:absolute;bottom:12px;left:12px;right:68px;z-index:4}
+.content{padding:14px;background:#0a0a0a}
+h2{color:#ffd700;font-size:14px;margin:18px 0 8px}
+img.foto{width:100%;border-radius:14px;display:block;margin:10px 0;border:1px solid #222}
+.card{background:#1a1a1a;border-radius:12px;padding:12px;margin:8px 0;font-size:12px;border:1px solid #222}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.grid div{background:#222;padding:10px;border-radius:10px;text-align:center;font-size:11px}
+input{width:100%;padding:11px;border-radius:10px;border:none;margin:6px 0;background:#222;color:white}
+button{width:100%;padding:11px;background:#ffd700;border:none;border-radius:10px;font-weight:900}
+#chatBox{height:240px;overflow-y:auto;background:#000;border-radius:12px;padding:10px;border:1px solid #222}
+.msg{margin:6px 0;font-size:11px;background:#1a1a1a;padding:8px;border-radius:8px}
+#warn{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;z-index:99;padding:20px}
+#warn div{background:#222;padding:20px;border-radius:14px;text-align:center;border:2px solid red;max-width:300px}
+</style>
+</head>
+<body>
+<div class="top-bar"><span>←</span><div class="search">🔍<input value="Temukan konten terkait"><b>Cari</b></div></div>
+
+<div class="video-section">
+<video autoplay muted loop playsinline controls>
+<source src="video_asli_x2.mp4" type="video/mp4">
+</video>
+<div class="overlay-text">jangan jahat jahat jadi orang,<br>nanti kalo dibalesnya pake<br>bug wa nyeselnya sampe<br>akhirat😭😆</div>
+<div class="side"><div><div class="ic">❤️</div><small>167</small></div><div><div class="ic">💬</div><small>4</small></div><div><div class="ic">🔖</div><small>30</small></div><div><div class="ic">↗️</div><small>46</small></div></div>
+<div class="bottom-meta"><b>⎯ browben [buy k... ◎ Foto Live · 07-27</b><p style="font-size:11px;color:#ccc">nyesel dah tuh😭 #fyp #bugwa<br><span style="color:white">X2 SMA AL ATIQIYAH • Video Asli 100% Bukan AI</span></p></div>
+</div>
+
+<div style="padding:10px 14px;background:#111;border-top:1px solid #222;border-bottom:1px solid #222;font-size:12px;color:#aaa">🔍 Pencarian · kata kata bug <span style="float:right">></span></div>
+
+<div class="content">
+<h2>📸 FOTO DI BAWAH - FOTO BARU YANG LU KIRIM ✅</h2>
+<img class="foto" src="foto_bug_wa_baru.jpg" alt="Foto Bug WA Baru - Foto yang baru lu kirim">
+
+<h2>📸 Foto Kelas Asli X2 Juga ✅</h2>
+<img class="foto" src="class_x2_real.jpg" alt="Foto Kelas X2">
+
+<div class="card"><b>🏫 SMA AL ATIQIYAH</b><br><b>Kelas:</b> X2 • 32 Siswa<br><b>Video Atas:</b> Video asli mata horror 100% bukan AI!<br><b>Foto Bawah:</b> Foto bug WA + foto kelas</div>
+
+<h2>🎵 Sebuah Kisah Klasik ✅</h2>
+<div class="card"><b>Sheila On 7 - Sebuah Kisah Klasik</b><audio controls loop style="width:100%;margin-top:8px"><source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg"></audio></div>
+
+<h2>👥 Nama Murid X2</h2>
+<div style="display:flex;gap:6px"><input id="namaBaru" placeholder="Ketik nama murid..."><button onclick="tambah()" style="width:80px">TAMBAH</button></div>
+<div class="grid" id="grid"></div>
+
+<h2>💬 Chat Kelas X2 + Anti Kasar ✅</h2>
+<div class="card" style="font-size:10px;color:#ffd700;border:1px dashed #ffd700">⚠️ Jangan ngomong kasar! Kena peringatan! 3x = mute!</div>
+<div id="chatBox"><div class="msg"><b>Wali Kelas:</b> Video di atas, foto di bawah udah bener belum X2?</div></div>
+<input id="namaChat" value="Anak X2"><input id="pesanChat" placeholder="Tulis chat..."><button onclick="kirim()">KIRIM</button>
+</div>
+
+<div style="padding:10px 14px;background:#000;display:flex;gap:10px;align-items:center;border-top:1px solid #222;position:sticky;bottom:0"><input placeholder="Tambahkan komentar..." style="flex:1;background:#1a1a1a;border:1px solid #333;border-radius:20px;padding:10px 14px"><span>🖼️</span><span>😊</span><span>@</span></div>
+
+<div id="warn"><div><h3 style="color:red">⚠️ KATA KASAR!</h3><p style="font-size:12px;margin-top:8px;color:#ccc">Jangan kasar di X2!<br>3x = mute!</p><button onclick="document.getElementById('warn').style.display='none'" style="margin-top:12px;background:red;color:white">OKE</button></div></div>
+
+<script>
+let list=[];function tambah(){let n=document.getElementById('namaBaru').value.trim();if(!n)return;list.push(n);document.getElementById('namaBaru').value='';render();}
+function render(){let g=document.getElementById('grid');g.innerHTML='';list.forEach((n,i)=>{let d=document.createElement('div');d.innerHTML=n+'<br><small>#'+(i+1)+'</small>';g.appendChild(d);});}
+let kasar=["anjing","bangsat","tolol","goblok","kontol","memek"];let langgar=0;
+function kirim(){let t=document.getElementById('pesanChat').value;if(!t)return;if(kasar.some(k=>t.toLowerCase().includes(k))){document.getElementById('warn').style.display='flex';langgar++;if(langgar>=3){document.getElementById('pesanChat').disabled=true;setTimeout(()=>document.getElementById('pesanChat').disabled=false,30000);}return;}let nm=document.getElementById('namaChat').value||'Anak X2';let b=document.getElementById('chatBox');let m=document.createElement('div');m.className='msg';m.innerHTML='<b>'+nm+':</b> '+t;b.appendChild(m);document.getElementById('pesanChat').value='';b.scrollTop=9999;}
+document.getElementById('pesanChat').addEventListener('keypress',e=>{if(e.key==='Enter')kirim();});
+</script>
+</body>
+</html>
