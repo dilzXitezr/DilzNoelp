@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>X2 SMA AL ATIQIYAH - FINAL V6 LENGKAP + BU WIDIYA - BY DILZNOELZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#08080a;color:#e5e5e5;overflow-x:hidden}
+.header{position:sticky;top:0;z-index:50;background:rgba(8,8,10,.95);backdrop-filter:blur(16px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222}
+.tag{background:#ffd700;color:#000;padding:6px 12px;border-radius:20px;font-size:10px;font-weight:900}
+.hero{position:relative;height:100vh;min-height:850px;display:flex;align-items:center;justify-content:center;background:#000;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.2) brightness(.55)}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 30%, transparent 10%, rgba(0,0,0,.92) 80%),linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.95))}
+.hero-content{position:relative;z-index:3;text-align:center;padding:20px;max-width:900px}
+.badge{display:inline-flex;background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);backdrop-filter:blur(12px);padding:8px 18px;border-radius:30px;font-size:10px;letter-spacing:2px;font-weight:800;color:#ffd700}
+.music{margin:14px auto;background:linear-gradient(180deg,rgba(255,215,0,.14),rgba(255,255,255,.05));border:1px solid rgba(255,215,0,.28);backdrop-filter:blur(18px);padding:12px 18px;border-radius:18px;display:inline-flex;gap:12px;align-items:center;box-shadow:0 0 30px rgba(255,215,0,.15)}
+.music button{width:42px;height:42px;border-radius:10px;border:none;background:#fff;color:#000;font-weight:900;cursor:pointer}
+.hero h1{font-family:'Space Grotesk';font-size:clamp(60px,18vw,120px);font-weight:900;line-height:.85;margin:16px 0;color:#fff}
+.hero h1 span{font-weight:300;font-style:italic;-webkit-text-stroke:1.5px #fff;color:transparent}
+.section{padding:32px 16px;max-width:1100px;margin:0 auto}
+.s-title{font-family:'Space Grotesk';font-size:20px;font-weight:800;display:flex;gap:12px;align-items:center}
+.s-title::before{content:'';width:32px;height:2px;background:#ffd700}
+.s-sub{color:#555;font-size:10px;letter-spacing:3px;margin-top:6px;margin-left:44px;font-weight:700}
+.real-photo{margin-top:16px;border-radius:22px;overflow:hidden;position:relative;height:560px;border:2px solid rgba(255,215,0,.35);box-shadow:0 0 40px rgba(255,215,0,.2)}
+.real-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;animation:gerakFoto 14s ease-in-out infinite alternate}
+@keyframes gerakFoto{0%{transform:scale(1)}50%{transform:scale(1.12) translate(10px,-10px)}100%{transform:scale(1.18) translate(-8px,8px)}}
+.real-photo .label{position:absolute;bottom:12px;left:12px;right:12px;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);padding:10px 14px;border-radius:14px;font-size:10px;font-weight:700;border:1px solid rgba(255,215,0,.3);color:#ffd700;display:flex;justify-content:space-between;z-index:2}
+.video-box{margin-top:14px;border-radius:20px;overflow:hidden;position:relative;height:460px;background:#000;border:1px solid rgba(255,215,0,.2)}
+.video-box video{width:100%;height:100%;object-fit:cover}
+.video-box .label{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,.75);padding:7px 12px;border-radius:20px;font-size:9px;font-weight:800;border:1px solid rgba(255,215,0,.25);color:#ffd700}
+.alarm-box{background:linear-gradient(180deg,rgba(255,0,0,.15),rgba(255,215,0,.12));border:1px solid rgba(255,0,0,.3);border-radius:18px;padding:18px;margin-top:14px}
+.alarm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:12px}
+.alarm-item{background:rgba(0,0,0,.5);border:1px solid #222;border-radius:14px;padding:12px;text-align:center}
+.alarm-item button{margin-top:8px;width:100%;background:linear-gradient(135deg,#ff0000,#ff6600);color:#fff;border:none;padding:10px;border-radius:10px;font-weight:800;font-size:10px;cursor:pointer}
+.members{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px;margin-top:14px}
+.member{background:linear-gradient(180deg,#151517,#0d0d0f);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:10px;text-align:center}
+.wali-card{background:linear-gradient(135deg,#ffd700,#ff8a00);border-radius:20px;padding:18px;margin-top:14px;display:flex;gap:14px;align-items:center;box-shadow:0 0 30px rgba(255,215,0,.3)}
+.chat-wrap{margin-top:16px;background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid #222;border-radius:22px;overflow:hidden}
+.chat-messages{height:360px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:radial-gradient(600px 200px at 50% 0%,rgba(255,215,0,.06),transparent)}
+.msg{background:rgba(255,255,255,.06);padding:10px 12px;border-radius:14px;max-width:85%;font-size:12px}
+.msg.me{align-self:flex-end;background:linear-gradient(135deg,#ffd700,#ffaa00);color:#000}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid #222;background:#0d0d0f}
+.chat-input input{flex:1;background:rgba(255,255,255,.06);border:1px solid #333;border-radius:12px;padding:12px 14px;color:#fff;font-size:12px;outline:none}
+.chat-input button{background:#fff;color:#000;border:none;padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer}
+.warning-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.warning-box{background:#1a1a1e;border:1px solid rgba(255,80,80,.35);border-radius:22px;padding:24px;max-width:340px;width:100%;text-align:center}
+.creator-box{margin-top:40px;background:linear-gradient(135deg,#ffd700,#ff8a00);padding:24px;border-radius:22px;text-align:center;box-shadow:0 0 40px rgba(255,215,0,.4)}
+</style>
+</head>
+<body>
+<div class="header"><h1>SMA <span>AL ATIQIYAH</span> X2 • BU WIDIYA</h1><div class="tag">FINAL V6 + WALI KELAS</div></div>
+
+<section class="hero">
+<video autoplay muted loop playsinline>
+<source src="video_final_ini.mp4" type="video/mp4">
+</video>
+<div class="hero-content">
+<div class="badge">◉ 51 COWOK • VIDEO ASLI MATA HORROR YANG INI • FOTO KLS ASLI YANG INI • BU WIDIYA • BY DILZNOELZ</div>
+<div class="music">
+<div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(#ffd700,#ff8a00);display:flex;align-items:center;justify-content:center;color:#000;font-weight:900">♪</div>
+<div><b>Sebuah Kisah Klasik ✅ Music Dalam APK</b><small id="musicStatus">Sheila On 7 • Tap ▶ • Music Harus Ada!</small></div>
+<button id="playBtn">▶</button>
+<audio id="audioPlayer" loop autoplay><source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg"></audio>
+</div>
+<h1>X<span>2</span></h1>
+<h2 style="font-size:11px;letter-spacing:4px;color:#888">SMA AL ATIQIYAH • 51 COWOK • WALI KELAS: BU WIDIYA • KP CIPANENGAH</h2>
+<p style="margin:12px auto 0;max-width:560px;font-size:11px;line-height:1.7;color:#888">Website resmi X2 ALL STARR 51 cowok. Wali kelas Bu Widiya. Video mata horror yang ini yang lu bls + foto kelas asli yang ini yang lu bls + musik harus ada — semua ada! By DilzNoelz.</p>
+<div style="margin-top:14px;background:#ffd700;color:#000;padding:8px 16px;border-radius:20px;font-weight:900;font-size:11px;display:inline-block">👨‍💻 PEMBIMBIN WEB: DILZNOELZ • WALI KELAS: BU WIDIYA</div>
+</div>
+</section>
+
+<div class="section">
+<div class="wali-card">
+<div style="width:56px;height:56px;border-radius:14px;background:#000;color:#ffd700;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px">BW</div>
+<div><b style="color:#000;font-size:14px">WALI KELAS: BU WIDIYA ✅</b><br><small style="color:#000;font-size:10px;font-weight:700">SMA AL ATIQIYAH • X2 ALL STARR • 51 COWOK • Kp Cipanengah • Bojong Genteng</small><br><small style="color:#000;font-size:9px">Guru Wali Kelas X2 — Pembimbing X2 ALL STARR</small></div>
+</div>
+</div>
+
+<div class="section">
+<div class="s-title">VIDEO WAJIB ON NO AI ✅ — VIDEO YANG INI YANG LU BLS!</div>
+<div class="s-sub">VIDEO MATA HORROR TANGAN — YANG INI AKU BLS — WAJIB ADA — UDAH ADA!</div>
+<div class="video-box">
+<video autoplay muted loop playsinline controls>
+<source src="video_final_ini.mp4" type="video/mp4">
+</video>
+<div class="label">◉ VIDEO YANG INI YANG LU BLS ✅ — MATA HORROR — 100% NO AI — MUNCUL — MUSIC ADA!</div>
+</div>
+<div style="margin-top:8px;background:rgba(0,255,0,.08);border:1px solid rgba(0,255,0,.25);padding:8px;border-radius:10px;font-size:10px;color:#0f0">✅ Vidio wajib on no AI — Video yang ini yang lu bls (mata horror tangan) — UDAH MUNCUL — MUSIC ADA — KLO NGGK AD AWAS AJ YA — UDAH ADA!</div>
+</div>
+
+<div class="section">
+<div class="s-title">FTO KLS ✅ — FOTO YANG INI YANG LU BLS!</div>
+<div class="s-sub">FOTO KLS ASLI X2 — KELAS IJO + BU WIDIYA — YANG INI AKU BLS — WAJIB ADA!</div>
+<div class="real-photo">
+<img src="class_x2_real.jpg" alt="Foto Kelas X2 Asli Bu Widiya" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800'">
+<div class="label"><span>📸 FTO KLS ASLI YANG INI ✅ — KELAS IJO + BU WIDIYA (WALI KELAS) + 27 COWOK — BERGERAK</span><span>FTO KLS ✅</span></div>
+</div>
+<div style="margin-top:8px;background:rgba(0,255,0,.08);border:1px solid rgba(0,255,0,.25);padding:8px;border-radius:10px;font-size:10px;color:#0f0">✅ Fto kls — Foto yang ini yang lu bls (kelas ijo + Bu Widiya) — UDAH MUNCUL BERGERAK — MUSIC ADA — KLO NGGK AD AWAS AJ YA — UDAH ADA!</div>
+</div>
+
+<div class="section">
+<div class="s-title">ALARM AT SEKOLAH KP CIPANENGAH ✅ + NAMA WALI KELAS BU WIDIYA ✅</div>
+<div class="alarm-box">
+<b>🔔 ALARM AT SEKOLAH KP CIPANENGAH ✅ — WALI KELAS: BU WIDIYA</b><br>
+<small style="font-size:10px;color:#ff8888">SMA AL ATIQIYAH — JL. Cipanengah-Bojong Genteng RT2 RW3 — Sukabumi 43353 — Wali Kelas: Bu Widiya</small><br>
+<small id="jamLive" style="font-size:10px;color:#666">Jam: 00:00:00 WIB — Kp Cipanengah</small>
+<div class="alarm-grid">
+<div class="alarm-item"><b>🔔 07:00</b><small>Bel Masuk — Bu Widiya</small><button onclick="bunyiAlarm('Masuk Pagi - Bu Widiya')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 09:30</b><small>Istirahat 1</small><button onclick="bunyiAlarm('Istirahat - Kp Cipanengah')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 12:00</b><small>Dzuhur</small><button onclick="bunyiAlarm('Dzuhur - AL ATIQIYAH')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🔔 15:30</b><small>Pulang — Bu Widiya</small><button onclick="bunyiAlarm('Pulang - Bu Widiya')">BUNYIKAN</button></div>
+<div class="alarm-item"><b>🚨 DARURAT</b><small>Beep — Bu Widiya</small><button onclick="bunyiBeepDarurat()">🚨 BEEP</button></div>
+</div>
+<audio id="alarmAudio" preload="auto"><source src="https://orangefreesounds.com/wp-content/uploads/2025/01/School-bell-ringing-sound-effect.mp3" type="audio/mpeg"></audio>
+</div>
+</div>
+
+<div class="section">
+<div class="s-title">MURID 51 ✅ + NAMA MURID ✅ + CHT UNTUK KLS ✅ + PERINGATAN KASAR ✅</div>
+<div class="s-sub">51 MURID X2 — WALI KELAS BU WIDIYA — BY DILZNOELZ</div>
+<div class="members" id="memberGrid"></div>
+<div class="chat-wrap">
+<div style="padding:14px;border-bottom:1px solid #222;display:flex;justify-content:space-between"><div><b>💬 CHT UNTUK KLS X2 — 51 COWOK — WALI KELAS BU WIDIYA — KP CIPANENGAH</b><br><small style="font-size:9px;color:#666">51 anggota • Live • Bu Widiya • By DilzNoelz • Peringatan kasar wajib ada!</small></div><div style="background:rgba(0,255,0,.15);border:1px solid rgba(0,255,0,.25);color:#0f8;padding:5px 10px;border-radius:20px;font-size:9px;font-weight:800">● LIVE</div></div>
+<div class="chat-messages" id="chatMessages">
+<div class="msg"><div style="font-size:9px;font-weight:800;opacity:.7">Bu Widiya — Wali Kelas</div>Anak-anak X2, foto kelas + video yang ini udah muncul? Musik harus ada ya! 😊<div style="font-size:8px;opacity:.6;margin-top:4px;text-align:right">07:00</div></div>
+<div class="msg me"><div style="font-size:9px;font-weight:800;opacity:.7">DilzNoelz — Pembuat Web</div>Udah Bu Widiya! Foto kls yang ini + vidio yang ini + musik — semua ada — kalo nggk ad awas aja ya — udah ada semua Bu! 🔥<div style="font-size:8px;opacity:.6;margin-top:4px;text-align:right">07:02</div></div>
+</div>
+<div class="chat-input"><input type="text" id="chatName" placeholder="Nama" style="max-width:85px" value="Anak X2"><input type="text" id="chatInput" placeholder="Tulis... jangan kasar!"><button onclick="sendChat()">KIRIM</button></div>
+</div>
+</div>
+
+<div class="warning-modal" id="warningModal"><div class="warning-box"><div style="font-size:40px">⚠️</div><h3 style="margin-top:10px;color:#ff5050">PERINGATAN UNTUK BAHASA KASAR WAJIB AD PERINGATAN!</h3><p id="warningText" style="font-size:12px;margin-top:10px;line-height:1.5"></p><button onclick="document.getElementById('warningModal').style.display='none'" style="margin-top:16px;width:100%;background:#ff5050;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:800">OKE BU WIDIYA — GAK KASAR LAGI</button></div></div>
+
+<div class="section">
+<div class="creator-box">
+<div style="font-size:50px">👨‍💻</div><h2 style="font-size:22px;font-weight:900;color:#000">DIBUAT OLEH</h2><h1 style="font-size:42px;font-weight:900;color:#000">DILZNOELZ</h1><p style="font-size:12px;font-weight:700;color:#000">WALI KELAS: BU WIDIYA • X2 ALL STARR • SMA AL ATIQIYAH • 51 COWOK<br>Kp Cipanengah — Sukabumi 43353</p><div style="margin-top:12px;background:#000;color:#ffd700;display:inline-block;padding:8px 18px;border-radius:20px;font-size:11px;font-weight:800">👑 PEMBIMBIN WEB NY: DILZNOELZ ✅ • WALI KELAS: BU WIDIYA ✅</div>
+</div>
+<div style="text-align:center;margin-top:20px;color:#555;font-size:10px;line-height:1.8">
+✅ Murid 51 • Music Ada • Nama sekolah SMA ALATIQIYAH • Nama murid • Alarm at sekolah kp cipanengah • Vidio wajib on no AI (Video yang ini yang lu bls) • Fto kls (Foto yang ini yang lu bls) • Cht untuk kls • Peringatan untuk bahasa kasar wajib ad peringatan • Pembikin web ny dilzNoelz • Nama wali kelas: bu widiya<br>
+© 2026 X2 AL ATIQIYAH — Kp Cipanengah — Wali Kelas Bu Widiya — FINAL V6 LENGKAP — Dibuat oleh DilzNoelz — Sebuah Kisah Klasik — Music Harus Ada — Udah Ada!
+</div>
+</div>
+
+<script>
+const audio=document.getElementById('audioPlayer'),btn=document.getElementById('playBtn'),status=document.getElementById('musicStatus');let playing=false;audio.volume=.7;
+function tryPlay(){audio.play().then(()=>{playing=true;btn.textContent='❚❚';status.textContent='🎵 Playing — Sebuah Kisah Klasik — Music Ada!';}).catch(()=>{btn.textContent='▶';});}
+tryPlay();btn.addEventListener('click',()=>{if(playing){audio.pause();playing=false;btn.textContent='▶';status.textContent='Tap ▶ — Music Harus Ada!';}else{tryPlay();}});
+function updateJam(){const e=document.getElementById('jamLive');if(e)e.textContent='Jam Sekarang: '+new Date().toLocaleTimeString('id-ID')+' WIB — Kp Cipanengah — Wali Kelas: Bu Widiya — SMA AL ATIQIYAH';}setInterval(updateJam,1000);updateJam();
+let audioCtx=null;function bunyiBeepDarurat(){try{if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<5;i++){const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=800+i*120;o.connect(g);g.connect(audioCtx.destination);const s=audioCtx.currentTime+i*.45;g.gain.setValueAtTime(.9,s);g.gain.exponentialRampToValueAtTime(.01,s+.35);o.start(s);o.stop(s+.35);}alert('🚨 BEEP DARURAT KP CIPANENGAH! Wali Kelas: Bu Widiya\\nBy DilzNoelz');}catch(e){}}
+function bunyiAlarm(j){const a=document.getElementById('alarmAudio');a.currentTime=0;a.volume=1;a.play().then(()=>alert('🔔 ALARM AT SEKOLAH KP CIPANENGAH BERBUNYI!\\nJenis: '+j+'\\nWali Kelas: Bu Widiya\\nBy DilzNoelz')).catch(()=>bunyiBeepDarurat());}
+let muridList=["Bu Widiya (Wali Kelas X2)","DilzNoelz (Pembuat Web)","Fajar","Rizki","Adit","Bima","Reza","Ilham","Farhan","Rafi","Dani","Aldi","Yusuf","Zidan","Rangga","Satria","Bagas","Rian","Fauzan","Akmal","Revan","Fikri","Andra","Dimas","Galang","Hafiz","Iqbal","Lutfi","Nanda","Fadli","Arfan","Alif","Reyhan","Arka","Rasyid","Dito","Eko","Gilang","Hendra","Irwan","Joko","Kurnia","Lukman","Maulana","Naufal","Oki","Putra","Qory","Rizal","Sandi","Teguh","Umar","Vino","Wahyu","Xavier","Yoga","Zaki"];
+const grid=document.getElementById('memberGrid');function renderMurid(){grid.innerHTML='';muridList.slice(0,51).forEach((n,i)=>{const d=document.createElement('div');d.className='member';d.innerHTML=`<div style="width:42px;height:42px;border-radius:50%;background:radial-gradient(#333,#000);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:900">${n[0]}</div><b style="font-size:10px">${n.toUpperCase()}</b><small style="font-size:8px;color:#666">${i==0?'WALI KELAS':'X2 #'+String(i).padStart(2,'0')}</small>`;grid.appendChild(d);});}renderMurid();
+const badWords=["anjing","bangsat","tolol","goblok","kontol","memek","ngentot","asu","bajingan","kampret","jancok","tai","babi","lonte","bego"];let violations=0;function containsBad(t){return badWords.some(w=>t.toLowerCase().includes(w));}
+function sendChat(){const name=document.getElementById('chatName').value.trim()||'Anak X2',text=document.getElementById('chatInput').value.trim();if(!text)return;if(containsBad(text)){const found=badWords.find(w=>text.toLowerCase().includes(w));document.getElementById('warningModal').style.display='flex';document.getElementById('warningText').innerHTML=`Wali Kelas Bu Widiya: Kata kasar terdeteksi <b style="color:#ff5050">${found}</b><br><br>Di X2 Kp Cipanengah kita sopan ya!<br>Pelanggaran ke-${violations+1}/3<br><br>⚠️ PERINGATAN UNTUK BAHASA KASAR WAJIB AD PERINGATAN!`;violations++;if(violations>=3){document.getElementById('chatInput').disabled=true;document.getElementById('chatInput').placeholder='Mute 30 detik! - Bu Widiya';setTimeout(()=>{document.getElementById('chatInput').disabled=false;violations=0;document.getElementById('chatInput').placeholder='Tulis... jangan kasar!';},30000);}return;}const time=new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});const m=document.createElement('div');m.className='msg me';m.innerHTML=`<div style="font-size:9px;font-weight:800;opacity:.7">${name}</div>${text}<div style="font-size:8px;opacity:.6;margin-top:4px;text-align:right">${time}</div>`;document.getElementById('chatMessages').appendChild(m);document.getElementById('chatInput').value='';document.getElementById('chatMessages').scrollTop=9999;}
+document.getElementById('chatInput').addEventListener('keypress',e=>{if(e.key==='Enter')sendChat();});
+</script>
+</body>
+</html>
