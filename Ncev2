@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2 - SMA AL ATIQIYAH | NO GIRLS ALL BOYS</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#08080a;color:#e5e5e5;overflow-x:hidden}
+.hero{position:relative;height:100vh;min-height:700px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.2) brightness(0.6)}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 40%, transparent 10%, rgba(0,0,0,0.9) 80%),linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95))}
+.hero-content{position:relative;z-index:3;text-align:center;padding:20px;max-width:900px}
+.badge{display:inline-flex;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(12px);padding:8px 18px;border-radius:30px;font-size:10px;letter-spacing:3px;font-weight:800;color:#999}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(60px,18vw,130px);font-weight:900;line-height:0.85;letter-spacing:-5px;margin:18px 0;color:#fff;text-shadow:0 0 50px rgba(255,255,255,0.2)}
+.hero h1 span{font-weight:300;font-style:italic;-webkit-text-stroke:1.5px #fff;color:transparent}
+.hero h2{font-size:clamp(11px,2.2vw,16px);letter-spacing:6px;color:#666;font-weight:700}
+.desc{margin:16px auto 0;max-width:500px;font-size:12.5px;line-height:1.7;color:#888}
+.btn-row{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:14px;border:none;font-weight:800;font-size:13px;cursor:pointer;transition:0.25s}
+.btn-primary{background:#fff;color:#000;box-shadow:0 12px 30px rgba(255,255,255,0.18)}
+.btn-ghost{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;backdrop-filter:blur(10px)}
+.section{padding:56px 20px;max-width:1100px;margin:0 auto}
+.s-title{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:800;letter-spacing:-1px;display:flex;align-items:center;gap:12px}
+.s-title::before{content:'';width:36px;height:2px;background:#fff}
+.s-sub{color:#555;font-size:11px;letter-spacing:3px;margin-top:6px;margin-left:48px;font-weight:700}
+.stats{margin:32px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:20px;text-align:center}
+.stat b{font-size:26px;font-weight:900;display:block}
+.stat small{font-size:10px;letter-spacing:2px;color:#666;font-weight:700}
+.cards{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:22px;transition:0.3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,0.18)}
+.card-icon{width:44px;height:44px;border-radius:12px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;margin-bottom:14px}
+.card h3{font-size:15px;font-weight:800;margin-bottom:6px}
+.card p{font-size:12px;line-height:1.6;color:#888}
+.gallery{margin-top:28px;display:grid;grid-template-columns:1.4fr 0.6fr;grid-template-rows:200px 200px;gap:12px}
+.g-item{border-radius:20px;overflow:hidden;position:relative;background:#111;border:1px solid rgba(255,255,255,0.08)}
+.g-item:first-child{grid-row:span 2}
+.g-item video,.g-item img{width:100%;height:100%;object-fit:cover}
+.g-item .label{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);padding:6px 12px;border-radius:20px;font-size:10px;font-weight:700;border:1px solid rgba(255,255,255,0.1)}
+.members{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(115px,1fr));gap:10px}
+.member{background:linear-gradient(180deg,#151517,#0d0d0f);border:1px solid rgba(255,255,255,0.07);border-radius:18px;padding:14px;text-align:center}
+.member .avatar{width:50px;height:50px;border-radius:50%;background:radial-gradient(#333,#000);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;border:1px solid rgba(255,255,255,0.1)}
+.member b{font-size:11px;font-weight:700;display:block}
+.member small{font-size:9px;color:#666}
+.footer{margin-top:70px;padding:36px 20px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;color:#555;font-size:11px;line-height:1.8}
+@media(max-width:700px){.gallery{grid-template-columns:1fr;grid-template-rows:auto}.g-item:first-child{grid-row:auto;height:280px}.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section class="hero">
+<video autoplay muted loop playsinline id="bgVideo">
+<source src="class_eye_bg.mp4" type="video/mp4">
+</video>
+<div class="hero-content">
+<div class="badge">◉ SMA AL ATIQIYAH • X2 • ALL BOYS</div>
+<h1>X<span>2</span></h1>
+<h2>NO GIRLS • ALL BOYS • BROTHERHOOD</h2>
+<p class="desc">Website resmi kelas X2. Kelas cowok semua, no drama, full solid. Video mata yang lu kirim jadi jiwa web ini — mata yang ngawasin, tangan yang saling genggam.</p>
+<div class="btn-row">
+<button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">JELAJAHI X2</button>
+<button class="btn btn-ghost" onclick="window.open('https://whatsapp.com/channel/0029VbCjEsCLNSZwGjAsEn1P','_blank')">SALURAN KELAS</button>
+</div>
+</div>
+</section>
+
+<div class="section" id="about">
+<div class="s-title">ABOUT X2</div>
+<div class="s-sub">SMA AL ATIQIYAH — KELAS PALING SOLID</div>
+<div class="stats">
+<div class="stat"><b>X2</b><small>KELAS</small></div>
+<div class="stat"><b>32 COWOK</b><small>NO CEWEK</small></div>
+<div class="stat"><b>AL ATIQIYAH</b><small>SMA</small></div>
+</div>
+<div class="cards">
+<div class="card"><div class="card-icon">◉</div><h3>Makna Video Mata</h3><p>Video yang lu kirim: tangan banyak pegang mata = solidaritas X2. Mata berdarah = kita lihat semua masalah bareng-bareng, hadapi bareng.</p></div>
+<div class="card"><div class="card-icon">⚡</div><h3>Kenapa Cowok Semua Enak?</h3><p>Bebas teriak, bebas joke kasar, tugas ngerjain bareng, dihukum bareng. No baper, cuma brotherhood.</p></div>
+<div class="card"><div class="card-icon">☠</div><h3>Dark Aesthetic</h3><p>Bukan kelas kalem. Kita kelas dengan karakter kuat — dark, brutal, jujur, tapi setia kawan. Kayak artwork mata lu.</p></div>
+</div>
+</div>
+
+<div class="section">
+<div class="s-title">BANNER VIDEO ASLI LU</div>
+<div class="s-sub">VIDEO EYE YANG LU KIRIM JADI HERO</div>
+<div class="gallery">
+<div class="g-item">
+<video autoplay muted loop playsinline controls><source src="class_eye_bg.mp4" type="video/mp4"></video>
+<div class="label">◉ VIDEO BENERAN DARI LU</div>
+</div>
+<div class="g-item"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600"><div class="label">SOLID</div></div>
+<div class="g-item"><img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=600"><div class="label">X2 FAMILY</div></div>
+</div>
+</div>
+
+<div class="section">
+<div class="s-title">DAFTAR ANAK X2</div>
+<div class="s-sub">32 ANAK COWOK SEMUA</div>
+<div class="members" id="memberGrid"></div>
+</div>
+
+<div class="footer">
+<b>X2 - SMA AL ATIQIYAH</b><br>
+Official Class Website • Dark Eye Edition • Video banner asli lu ✅<br>
+Made by dilzNoelz Stur • Cianjur • No Girls, All Brotherhood<br>
+© 2026 X2 AL ATIQIYAH
+</div>
+
+<script>
+const names=["DilzNoelz","Fajar","Rizki","Adit","Bima","Reza","Ilham","Farhan","Rafi","Dani","Aldi","Yusuf","Zidan","Rangga","Satria","Bagas","Rian","Fauzan","Akmal","Revan","Fikri","Andra","Dimas","Galang","Hafiz","Iqbal","Lutfi","Nanda","Fadli","Arfan","Alif","Reyhan"];
+const grid=document.getElementById('memberGrid');
+names.forEach((n,i)=>{
+ const d=document.createElement('div');d.className='member';
+ d.innerHTML=`<div class="avatar">${n[0]}</div><b>${n.toUpperCase()}</b><small>X2 #${String(i+1).padStart(2,'0')}</small>`;
+ grid.appendChild(d);
+});
+</script>
+</body>
+</html>
