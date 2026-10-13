@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2 ALL STARR - FIX FINAL 1 FILE - PILIH FOTO VIDEO LANGSUNG MUNCUL</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#08080a;color:#fff}
+.header{padding:12px 16px;background:#0a0a0a;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.header b{font-size:14px}.tag{background:#ffd700;color:#000;padding:5px 10px;border-radius:20px;font-size:9px;font-weight:900}
+.hero{position:relative;height:75vh;min-height:500px;background:#000;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.overlay{position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,0.9))}
+.hero.content{position:relative;z-index:2;text-align:center;padding:20px}
+.section{padding:16px;max-width:800px;margin:0 auto}
+.card{background:#1a1a1a;border:1px solid #222;border-radius:14px;padding:14px;margin:12px 0;font-size:12px;line-height:1.6}
+input[type=file]{width:100%;padding:10px;background:#222;border:1px dashed #ffd700;border-radius:10px;color:#fff;margin:8px 0;font-size:11px}
+button{padding:10px 16px;background:#ffd700;color:#000;border:none;border-radius:10px;font-weight:800;cursor:pointer;font-size:11px}
+img{width:100%;border-radius:16px;display:block;margin:10px 0;border:1px solid #222}
+.vbox{height:420px;border-radius:16px;overflow:hidden;background:#111;border:1px solid #222;margin:10px 0}
+.vbox video{width:100%;height:100%;object-fit:cover}
+</style>
+</head>
+<body>
+<div class="header"><b>SMA AL ATIQIYAH • X2 ALL STARR • 51 COWOK</b><span class="tag">FIX FINAL - PILIH FILE LANGSUNG MUNCUL</span></div>
+
+<div class="hero" id="hero">
+<video id="heroVideo" autoplay muted loop playsinline></video>
+<div class="overlay"></div>
+<div class="content">
+<h1 style="font-size:70px;font-weight:900">X2</h1>
+<p style="font-size:11px;color:#ffd700">FIX FINAL - PILIH VIDEO + FOTO DARI HP LANGSUNG MUNCUL 100%!</p>
+<div style="margin:14px auto;background:rgba(255,215,0,0.15);border:1px solid #ffd700;padding:10px 14px;border-radius:14px;display:inline-flex;gap:10px;align-items:center">
+<span>♪</span><div style="text-align:left"><b style="font-size:11px">Sebuah Kisah Klasik</b><br><small id="st" style="font-size:9px;color:#ffd700">Tap ▶ untuk musik</small></div>
+<button id="playBtn">▶</button>
+<audio id="audio" loop><source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg"></audio>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="card" style="border:1px dashed #ffd700;background:rgba(255,215,0,0.08)">
+<b>🔧 CARA FIX BIAR FOTO VIDEO MUSIK MUNCUL 100% (YANG TADI GAK MUNCUL):</b><br>
+1. Buka file <b>index.html</b> ini di Chrome HP<br>
+2. Di bawah ini ada tombol <b>PILIH VIDEO</b> dan <b>PILIH FOTO</b> — tap tombol itu!<br>
+3. Pilih <b>video yang ini</b> yang baru lu kirim (yang mata berdarah 15 detik) dari galeri HP lu — langsung muncul di atas!<br>
+4. Pilih <b>foto kelas asli X2</b> dari galeri — langsung muncul di bawah!<br>
+5. Tap tombol ▶ buat musik! Musik butuh internet!<br>
+<b>DIJAMIN MUNCUL 100% KARENA LU PILIH LANGSUNG DARI HP!</b>
+</div>
+
+<h2 style="color:#ffd700;font-size:13px;margin:20px 0 8px">🎬 VIDEO YANG INI - PILIH DARI HP BIAR MUNCUL ✅</h2>
+<input type="file" id="videoInput" accept="video/*">
+<p style="font-size:10px;color:#888">↑ Tap Pilih File → Pilih video yang ini yang baru lu kirim (yang mata berdarah) → Langsung muncul di atas & di bawah!</p>
+<div class="vbox"><video id="videoBox" autoplay muted loop playsinline controls></video></div>
+
+<h2 style="color:#ffd700;font-size:13px;margin:20px 0 8px">📸 FOTO KELAS - PILIH DARI HP BIAR MUNCUL ✅</h2>
+<input type="file" id="photoInput" accept="image/*">
+<p style="font-size:10px;color:#888">↑ Tap Pilih File → Pilih foto kelas asli X2 → Langsung muncul di bawah!</p>
+<img id="photoPreview" style="display:none" alt="Foto X2">
+
+<h2 style="color:#ffd700;font-size:13px;margin:20px 0 8px">🎵 LAGU - SEBUAH KISAH KLASIK ✅</h2>
+<div class="card">
+<b>Sheila On 7 - Sebuah Kisah Klasik</b><br>
+<audio controls loop style="width:100%;margin-top:8px">
+<source src="https://files.catbox.moe/5zy3q5.mp3" type="audio/mpeg">
+</audio>
+<p style="font-size:9px;color:#888;margin-top:6px">Kalo gak bunyi: 1. Pastikan ada internet 2. Tap tombol ▶ di atas 3. Kalo masih gak bunyi, tap audio di atas!</p>
+</div>
+
+<div class="card">
+<b>✅ FINAL FIX:</b><br>
+✅ Video yang ini — pilih dari HP — langsung muncul HD 100% — gak perlu se-folder!<br>
+✅ Foto kelas — pilih dari HP — langsung muncul HD 100%!<br>
+✅ Lagu — butuh internet + tap ▶<br>
+✅ Gak perlu GitHub, gak perlu Netlify, 1 file ini aja cukup! Buka di Chrome HP langsung jadi!
+</div>
+</div>
+
+<script>
+const heroVideo=document.getElementById('heroVideo');
+const videoBox=document.getElementById('videoBox');
+const photoPreview=document.getElementById('photoPreview');
+
+document.getElementById('videoInput').addEventListener('change', function(e){
+  const file=e.target.files[0];
+  if(!file) return;
+  const url=URL.createObjectURL(file);
+  heroVideo.src=url;
+  videoBox.src=url;
+  heroVideo.play();
+  videoBox.play();
+  alert('✅ Video yang ini berhasil dimuat! Sekarang muncul di atas & bawah HD 100%!');
+});
+
+document.getElementById('photoInput').addEventListener('change', function(e){
+  const file=e.target.files[0];
+  if(!file) return;
+  const url=URL.createObjectURL(file);
+  photoPreview.src=url;
+  photoPreview.style.display='block';
+  alert('✅ Foto kelas berhasil dimuat! Sekarang muncul HD 100%!');
+});
+
+const a=document.getElementById('audio'),b=document.getElementById('playBtn'),s=document.getElementById('st');let p=false;a.volume=0.8;
+b.addEventListener('click',()=>{
+  if(p){a.pause();p=false;b.textContent='▶';s.textContent='Tap ▶ untuk musik';}
+  else{a.play().then(()=>{p=true;b.textContent='❚❚';s.textContent='🎵 Playing... Sebuah Kisah Klasik';}).catch(()=>alert('Butuh internet! Pastikan HP ada internet buat lagu!'));}}
+);
+</script>
+</body>
+</html>
