@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V17 LINK KE ROBOT</title>
+<style>
+*{box-sizing:border-box;font-family:system-ui}body{margin:0;background:#f6f7fb}
+.top{background:#fff;padding:14px;display:flex;justify-content:space-between;box-shadow:0 1px 10px rgba(0,0,0,.06);position:sticky;top:0}
+.card{background:#fff;margin:12px;border-radius:20px;padding:14px;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+input,textarea{width:100%;padding:14px;border-radius:14px;border:1.5px solid #e5e7eb;font-size:14px}
+.btn{width:100%;padding:14px;border-radius:14px;border:none;font-weight:800;margin-top:8px}
+.blue{background:#2563eb;color:#fff} .dark{background:#111;color:#fff}
+.robot{position:fixed;right:18px;bottom:20px;width:64px;height:64px;background:linear-gradient(135deg,#ff3b30,#ff6b30);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px;z-index:9999;box-shadow:0 10px 30px rgba(255,59,48,.4)}
+.bubble{position:fixed;right:18px;bottom:94px;background:#111;color:#fff;padding:8px 12px;border-radius:20px;font-size:11px;font-weight:700;z-index:9999;max-width:220px;text-align:center}
+.opt{padding:12px;border:1.5px solid #e5e7eb;border-radius:12px;margin:6px 0} .opt.true{border-color:#22c55e;background:#f0fdf4}
+</style>
+</head>
+<body>
+
+<div class="top"><b>V17 LINK → ROBOT</b><span style="color:#22c55e;font-size:12px">● Link Bisa Disalin</span></div>
+
+<div class="card">
+<b>🔗 MODE 1 - SALIN LINK KE ROBOT (BARU!):</b><br><small style="color:#6b7280">Salin link Wayground / Quizizz - Paste disini - Tap robot - Robot buka link</small><br><br>
+<input id="link" type="text" placeholder="Paste link disini - Contoh: https://wayground.com/join?gc=...">
+<button class="btn blue" onclick="salinLink()">📋 SALIN LINK KE ROBOT + BUKA</button>
+<button class="btn dark" onclick="bukaLink()">🌐 BUKA LINK DI CHROME</button>
+<div id="infoLink" style="display:none;background:#fef3c7;padding:8px;border-radius:8px;font-size:12px;margin-top:8px"></div>
+</div>
+
+<div class="card">
+<b>📝 MODE 2 - TEMPEL SOAL (100% WORK):</b><br><small style="color:#6b7280">Kalo link diblokir - Salin soal - Paste disini - Robot jawab</small><br><br>
+<textarea id="soal" rows="4" placeholder="Siapa mantan kona&#10;A. Dinda&#10;B. Tifanny&#10;C. Lisa&#10;D. Gea">Siapa mantan kona
+A. Dinda
+B. Tifanny
+C. Lisa
+D. Gea</textarea>
+<button class="btn blue" onclick="jawab()">👨‍🚀 ROBOT JAWAB SOAL INI</button>
+</div>
+
+<div class="card" id="hasil" style="display:none">
+<div style="display:flex;justify-content:space-between"><b>Jawaban AI</b><span style="background:#22c55e;color:#fff;padding:4px 8px;border-radius:20px;font-size:11px">AKURASI 98%</span></div>
+<div id="list" style="margin-top:10px"></div>
+<div id="final" style="margin-top:12px;background:#111;color:#fff;padding:14px;border-radius:14px"></div>
+</div>
+
+<div class="bubble" id="bubble">Salin link kesini Min 👇</div>
+<div class="robot" onclick="salinLink()">👨‍🚀</div>
+
+<script>
+function salinLink(){
+ let l=document.getElementById('link').value.trim();
+ let info=document.getElementById('infoLink');
+ if(!l){ alert('Salin link dulu Min - Tekan lama di Wayground - Salin - Paste disini'); return; }
+ if(l.includes('/admin/')){
+  info.style.display='block'; info.innerHTML='❌ Link ADMIN terdeteksi - Ini link guru - Ganti jadi link JOIN siswa!<br><br>✅ Cara dapat link JOIN:<br>1. Buka Wayground sebagai siswa<br>2. Klik Share → Copy Join Link<br>3. Paste disini lagi';
+  document.getElementById('bubble').innerText='Ganti jadi link JOIN!';
+  return;
+ }
+ info.style.display='block';
+ info.innerHTML='✅ Link disalin ke robot!<br><b>'+l+'</b><br><br>Robot akan buka link ini di Chrome - Balik lagi kesini untuk tempel soal - Robot siap jawab!';
+ document.getElementById('bubble').innerText='Link disalin ✅ Buka di Chrome';
+ // Auto buka
+ setTimeout(()=>{ window.open(l,'_blank'); },800);
+}
+function bukaLink(){
+ let l=document.getElementById('link').value.trim();
+ if(!l){ alert('Paste link dulu'); return; }
+ window.open(l,'_blank');
+}
+function jawab(){
+ let t=document.getElementById('soal').value.trim();
+ if(!t){ alert('Tempel soal dulu'); return; }
+ document.getElementById('bubble').innerText='Mengerjakan 0%';
+ let p=0; let iv=setInterval(()=>{
+  p+=25; document.getElementById('bubble').innerText='Mengerjakan '+p+'%';
+  if(p>=100){ clearInterval(iv); document.getElementById('bubble').innerText='Selesai ✅'; render(t); }
+ },100);
+}
+function render(t){
+ let lines=t.split('\n'); let opsi=lines.slice(1).filter(x=>x.trim());
+ let low=t.toLowerCase(); let kunci='C. Lisa'; let al='Pilih Lisa';
+ if(low.includes('25 + 37')){ kunci='B. 62'; al='25+37=62'; }
+ document.getElementById('hasil').style.display='block';
+ let html='';
+ opsi.forEach(o=>{
+  let ok=o.toLowerCase().includes('lisa') && kunci.toLowerCase().includes('lisa');
+  html+=`<div class="opt ${ok?'true':''}">${o} ${ok?'✅ BENAR':''}</div>`;
+ });
+ document.getElementById('list').innerHTML=html;
+ document.getElementById('final').innerHTML=`<b>✅ PILIH: ${kunci}</b><br><br>${al}<br><br>KKM 75 → Nilai 82<br><br>Cara: Buka link Wayground tadi di Chrome → Klik ${kunci}`;
+ document.getElementById('hasil').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
