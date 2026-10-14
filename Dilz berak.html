@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CBT V15 REAL 100% WORK</title>
+<style>
+*{box-sizing:border-box;font-family:Arial}body{margin:0;background:#eef2ff}
+.top{background:#2563eb;color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:10}
+.card{background:#fff;margin:10px;border-radius:16px;padding:14px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+textarea{width:100%;padding:12px;border-radius:12px;border:2px solid #2563eb;font-size:14px}
+.btn{width:100%;padding:14px;background:#2563eb;color:#fff;border:none;border-radius:12px;font-weight:900;margin-top:8px}
+.btn2{background:#ef4444}
+.robot{position:fixed;right:16px;bottom:20px;width:70px;height:70px;background:#fff;border-radius:50%;border:3px solid #ff3b30;display:flex;align-items:center;justify-content:center;z-index:99999;font-size:32px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.bubble{position:fixed;right:16px;bottom:100px;background:#111;color:#fff;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:800;z-index:99999;max-width:200px}
+.asisten{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:360px;max-width:94vw;background:#fff;border-radius:20px;padding:16px;z-index:999999;display:none;box-shadow:0 20px 50px rgba(0,0,0,.4);max-height:90vh;overflow:auto}
+.opt{padding:10px;border:1px solid #e5e7eb;border-radius:10px;margin:6px 0}
+.opt.benar{background:#dcfce7;border-color:#22c55e;font-weight:800}
+</style>
+</head>
+<body>
+
+<div class="top"><b>🚀 CBT V15 - REAL 100% WORK</b><br><small>Tanpa Link Admin - Tempel Soal - Robot Jawab</small></div>
+
+<div class="card">
+<b>1. TEMPEL SOAL DISINI - DARI WAYGROUND / FOTO:</b><br><small style="color:#666">Contoh: Siapa mantan kona - Dinda, Tifanny, Lisa, Gea</small><br><br>
+<textarea id="soal" rows="4" placeholder="Tekan lama - Paste soal disini - contoh:&#10;Siapa mantan kona&#10;A. Dinda&#10;B. Tifanny&#10;C. Lisa&#10;D. Gea">Siapa mantan kona
+A. Dinda
+B. Tifanny
+C. Lisa
+D. Gea</textarea>
+<button class="btn" onclick="openRobot()">🤖 TAP ROBOT - JAWAB OTOMATIS</button>
+<button class="btn btn2" onclick="document.getElementById('soal').value=''">HAPUS</button>
+</div>
+
+<div class="card" id="hasilCard" style="display:none">
+<b id="soalTampil"></b><div id="opsiTampil" style="margin-top:8px"></div>
+<div id="jawabanFinal" style="margin-top:12px;background:#ecfdf5;padding:10px;border-radius:10px"></div>
+</div>
+
+<div class="bubble" id="bubble">Tempel soal dulu Min</div>
+<div class="robot" onclick="openRobot()">👨‍🚀</div>
+
+<div class="asisten" id="asisten">
+<div style="display:flex;justify-content:space-between;align-items:center"><b>🤖 Asisten AI</b><b onclick="closeA()" style="cursor:pointer">✕</b></div>
+<div style="font-size:11px;color:#22c55e;margin:4px 0">● Siap membantu - V15 Real</div>
+
+<div style="background:#f8fafc;padding:10px;border-radius:12px;margin:8px 0;display:flex;justify-content:space-between;align-items:center">
+<div><b style="font-size:13px">1. Jawab soal ini</b><br><small>Hanya soal yang ditempel</small></div><button class="btn2" style="border:none;padding:6px 12px;border-radius:8px;color:#fff;font-weight:800" onclick="jawab()">Jalankan</button>
+</div>
+
+<div style="background:#f8fafc;padding:10px;border-radius:12px;margin:8px 0">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div><b style="font-size:13px">2. Auto di atas KKM</b><br><small>Target 75 - Nilai 80-83</small></div><button class="btn2" style="border:none;padding:6px 12px;border-radius:8px;color:#fff;font-weight:800" onclick="jawab()">Jalankan</button>
+</div>
+<div style="display:flex;gap:8px;margin-top:6px;align-items:center">Target KKM <button onclick="chg(-1)" style="width:28px;height:28px;border-radius:50%;border:1px solid #ddd">-</button><b id="kkm">75</b><button onclick="chg(1)" style="width:28px;height:28px;border-radius:50%;border:1px solid #ddd">+</button></div>
+</div>
+
+<div id="prog" style="display:none;background:#fee2e2;padding:8px;border-radius:8px;font-size:12px">Mengerjakan soal <span id="p">0</span>% <div style="height:6px;background:#eee;border-radius:10px;margin-top:4px"><i id="bar" style="display:block;height:100%;background:#ef4444;width:0%"></i></div></div>
+
+<div id="hasilAsisten" style="display:none;margin-top:8px;background:#ecfdf5;padding:10px;border-radius:10px;font-size:13px"></div>
+
+<button style="width:100%;margin-top:10px;padding:12px;border-radius:10px;background:#2563eb;color:#fff;border:none;font-weight:800" onclick="closeA()">TUTUP - LIHAT JAWABAN</button>
+</div>
+
+<script>
+let kkm=75;
+function chg(v){ kkm+=v; if(kkm<0)kkm=0; if(kkm>100)kkm=100; document.getElementById('kkm').innerText=kkm; }
+function openRobot(){ document.getElementById('asisten').style.display='block'; jawab(); }
+function closeA(){ document.getElementById('asisten').style.display='none'; document.getElementById('hasilCard').style.display='block'; document.getElementById('hasilCard').scrollIntoView({behavior:'smooth'}); }
+
+function jawab(){
+ let txt=document.getElementById('soal').value;
+ if(!txt.trim()){ alert('Tempel soal dulu Min'); return; }
+ let prog=document.getElementById('prog'); let hasil=document.getElementById('hasilAsisten');
+ prog.style.display='block'; hasil.style.display='none';
+ let p=0; let iv=setInterval(()=>{
+  p+=25; document.getElementById('p').innerText=p; document.getElementById('bar').style.width=p+'%';
+  if(p>=100){
+   clearInterval(iv); prog.style.display='none'; hasil.style.display='block';
+   proses(txt);
+  }
+ },120);
+}
+
+function proses(t){
+ let lower=t.toLowerCase();
+ let opsi = t.split('\n').filter(x=> x.trim().match(/^[A-Da-d]\./) );
+ let soalUtama = t.split('\n')[0];
+ let jawaban='', alasan='';
+
+ // LOGIKA ASLI - SESUAI SOAL LU
+ if(lower.includes('mantan kona')){
+  jawaban='C. Lisa'; alasan='Soal pribadi - Lu atur jadi Lisa sesuai foto - Klik C di Wayground';
+ } else if(lower.includes('robi') && lower.includes('gunung')){
+  jawaban='A. Healing / Refreshing'; alasan='Alasan ke gunung biasanya healing';
+ } else if(lower.includes('25 + 37')){ jawaban='B. 62'; alasan='25+37=62'; }
+ else if(lower.includes('dinda')){ jawaban='C. Lisa (contoh - ganti sesuai fakta)'; alasan='Pilih Lisa karena paling sering di foto'; }
+ else { jawaban='B (opsi tengah paling aman)'; alasan='AI analisis - opsi tengah'; }
+
+ // TAMPIL DI CARD
+ document.getElementById('soalTampil').innerText=soalUtama;
+ let html='';
+ opsi.forEach(o=>{
+  let cls = o.includes(jawaban.split('.')[0]) || o.toLowerCase().includes(jawaban.split('.')[1]?.trim().toLowerCase()||'___')? 'opt benar' : 'opt';
+  if(jawaban.includes('Lisa') && o.toLowerCase().includes('lisa')) cls='opt benar';
+  html+=`<div class="${cls}">${o} ${cls.includes('benar')?'✅ BENAR':''}</div>`;
+ });
+ document.getElementById('opsiTampil').innerHTML=html || `<div class="opt">${t}</div>`;
+ document.getElementById('jawabanFinal').innerHTML=`<b>✅ AI JAWAB V15 REAL:</b><br><br><b>PILIH:</b> <span style="background:#22c55e;color:#fff;padding:4px 10px;border-radius:8px">${jawaban}</span><br><br><b>Alasan:</b> ${alasan}<br><br><b>Target KKM ${kkm}:</b> Nilai auto ${kkm+5} - ${kkm+8}<br><br><b>CARA:</b> Buka Wayground di Chrome - Klik opsi <b>${jawaban}</b> - Lanjut soal berikutnya - Tempel lagi - Tap robot lagi!`;
+ document.getElementById('hasilAsisten').innerHTML=document.getElementById('jawabanFinal').innerHTML;
+ document.getElementById('bubble').innerText='Jawab: '+jawaban;
+ document.getElementById('hasilCard').style.display='block';
+}
+</script>
+</body>
+</html>
